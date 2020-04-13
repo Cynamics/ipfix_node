@@ -5494,5 +5494,17 @@
       "Requester": "",
       "Revision": "",
       "Date": ""
+    },
+    "ENTERPRISE": {
+      "ElementID": "ENTERPRISE",
+      "Name": "TheFieldIdIsEnterpriseSpecific",
+      "DataType": "",
+      "Data Type Semantics": "",
+      "Status": "",
+      "Units": "",
+      "Range": "",
+      "Requester": "",
+      "Revision": "",
+      "Date": ""
     }
   }
