@@ -19,10 +19,7 @@ var Deserializer = function (params) {
     this.Storage = require('./lib/storage/template_storage.js');
     this.conf = Object.assign(defaultConf, params);
     this.deserialize = function (buffer) {
-        // Netflow 9, IPFix (Netflow 10)
         const version = buffer.readUInt16BE(0);
-        // Netflow 5,7
-        const versionOld = buffer.readUInt32BE(0);
         switch (version) {
             case VERSION_IPFIX:
                 if (typeof IpfixPacket == 'function') {
@@ -41,7 +38,6 @@ var Deserializer = function (params) {
                 }
                 break;
             case VERSION_NETFLOW9:
-                // Parse NETFLOW
                 if (typeof Netflow9Packet == 'function') {
                     return new Promise(function (resolve, reject) {
                         try {
@@ -57,41 +53,32 @@ var Deserializer = function (params) {
                     return console.error('Please provide a template, or tell the developer to provide this script with a default one !');
                 }
                 break;
-            // When it's a Netflow 5 or 7, version will be 0 (the first 2 bytes of 4)
-            case 0:
-                switch (versionOld) {
-                    case VERSION_NETFLOW7:
-                        //Parse
-                        if (typeof Netflow7Packet == 'function') {
-                            return new Promise(function (resolve, reject) {
-                                try {
-                                    var ParsedPacket = new Netflow7Packet(buffer);
-                                    resolve(ParsedPacket);
-                                } catch (e) {
-                                    reject(e);
-                                }
-                            });
-                        } else {
-                            return console.error('Please provide a template, or tell the developer to provide this script with a default one !');
+            case VERSION_NETFLOW7:
+                if (typeof Netflow7Packet == 'function') {
+                    return new Promise(function (resolve, reject) {
+                        try {
+                            var ParsedPacket = new Netflow7Packet(buffer);
+                            resolve(ParsedPacket);
+                        } catch (e) {
+                            reject(e);
                         }
-                        break;
-                    case VERSION_NETFLOW5:
-                        //Parse
-                        if (typeof Netflow5Packet == 'function') {
-                            return new Promise(function (resolve, reject) {
-                                try {
-                                    var ParsedPacket = new Netflow5Packet(buffer);
-                                    resolve(ParsedPacket);
-                                } catch (e) {
-                                    reject(e);
-                                }
-                            });
-                        } else {
-                            return console.error('Please provide a template, or tell the developer to provide this script with a default one !');
+                    });
+                } else {
+                    return console.error('Please provide a template, or tell the developer to provide this script with a default one !');
+                }
+                break;
+            case VERSION_NETFLOW5:
+                if (typeof Netflow5Packet == 'function') {
+                    return new Promise(function (resolve, reject) {
+                        try {
+                            var ParsedPacket = new Netflow5Packet(buffer);
+                            resolve(ParsedPacket);
+                        } catch (e) {
+                            reject(e);
                         }
-                        break;
-                    default:
-                        break;
+                    });
+                } else {
+                    return console.error('Please provide a template, or tell the developer to provide this script with a default one !');
                 }
                 break;
             default:
