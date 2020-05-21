@@ -5459,6 +5459,54 @@
       "Revision": "0",
       "Date": "2018-07-10"
     },
+    "33000": {
+      "ElementID": "33000",
+      "Name": "Ingress ACL ID",
+      "DataType": "string",
+      "Data Type Semantics": "identifier",
+      "Status": "current",
+      "Units": "",
+      "Range": "",
+      "Requester": "",
+      "Revision": "0",
+      "Date": "2020-05-21"
+    },
+    "33001": {
+      "ElementID": "33001",
+      "Name": "Egress ACL ID",
+      "DataType": "string",
+      "Data Type Semantics": "identifier",
+      "Status": "current",
+      "Units": "",
+      "Range": "",
+      "Requester": "",
+      "Revision": "0",
+      "Date": "2020-05-21"
+    },
+    "33002": {
+      "ElementID": "33002",
+      "Name": "Firewall Extended Event ID",
+      "DataType": "unsigned16",
+      "Data Type Semantics": "identifier",
+      "Status": "current",
+      "Units": "",
+      "Range": "",
+      "Requester": "",
+      "Revision": "0",
+      "Date": "2020-05-21"
+    },
+    "40000": {
+      "ElementID": "40000",
+      "Name": "AAA Username",
+      "DataType": "string",
+      "Data Type Semantics": "identifier",
+      "Status": "current",
+      "Units": "",
+      "Range": "",
+      "Requester": "",
+      "Revision": "0",
+      "Date": "2020-05-21"
+    },
     "65-69": {
       "ElementID": "65-69",
       "Name": "Assigned for NetFlow v9 compatibility",
