@@ -1,11 +1,15 @@
 {
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "name": "ipfix_node",
   "version": "1.1.1",
   "description": "Ipfix flow deserializer in Node.JS",
   "main": "deserializer.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -24,8 +28,10 @@
   "dependencies": {
     "lodash": "^4.17.15",
     "bignum": "^0.13.1",
-    "ip-address": "^6.3.0"
+    "ip-address": "^6.3.0",
+    "snyk": "^1.316.1"
   },
   "author": "Gabs",
-  "license": "ISC"
+  "license": "ISC",
+  "snyk": true
 }
