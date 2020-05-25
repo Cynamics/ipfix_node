@@ -1442,7 +1442,7 @@
     "148": {
       "ElementID": "148",
       "Name": "flowId",
-      "DataType": "unsigned64",
+      "DataType": "Hex",
       "Data Type Semantics": "identifier",
       "Status": "current",
       "Units": "",
