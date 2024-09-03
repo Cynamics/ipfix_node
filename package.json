@@ -22,9 +22,9 @@
     "nodejs"
   ],
   "dependencies": {
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "bignum": "^0.13.1",
-    "ip-address": "^6.3.0"
+    "ip-address": "^9.0.5"
   },
   "author": "Gabs",
   "license": "ISC"
