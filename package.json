@@ -1,7 +1,7 @@
 {
   "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "name": "ipfix_node",
-  "version": "1.1.1",
+  "version": "1.1.4",
   "description": "Ipfix flow deserializer in Node.JS",
   "main": "deserializer.js",
   "scripts": {
@@ -23,7 +23,6 @@
   ],
   "dependencies": {
     "lodash": "^4.17.15",
-    "bignum": "^0.13.1",
     "ip-address": "^6.3.0"
   },
   "author": "Gabs",
