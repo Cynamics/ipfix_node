@@ -82,7 +82,6 @@ var Deserializer = function (params) {
                 }
                 break;
             default:
-                console.error("Version unsupported!");
                 return new Promise(function (resolve, reject) {
                     reject(new RangeError("Unsupported sample version"));
                 });
