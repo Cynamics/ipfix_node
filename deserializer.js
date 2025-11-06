@@ -34,7 +34,9 @@ var Deserializer = function (params) {
                         }
                     });
                 } else {
-                    return Promise.reject(new Error('Please provide a template, or tell the developer to provide this script with a default one !'));
+                    return new Promise(function (resolve, reject) {
+                        reject(new Error('Please provide a template, or tell the developer to provide this script with a default one !'));
+                    });
                 }
                 break;
             case VERSION_NETFLOW9:
@@ -50,7 +52,9 @@ var Deserializer = function (params) {
                         }
                     });
                 } else {
-                    return Promise.reject(new Error('Please provide a template, or tell the developer to provide this script with a default one !'));
+                    return new Promise(function (resolve, reject) {
+                        reject(new Error('Please provide a template, or tell the developer to provide this script with a default one !'));
+                    });
                 }
                 break;
             case VERSION_NETFLOW7:
@@ -64,7 +68,9 @@ var Deserializer = function (params) {
                         }
                     });
                 } else {
-                    return Promise.reject(new Error('Please provide a template, or tell the developer to provide this script with a default one !'));
+                    return new Promise(function (resolve, reject) { 
+                        reject(new Error('Please provide a template, or tell the developer to provide this script with a default one !'));
+                    });
                 }
                 break;
             case VERSION_NETFLOW5:
@@ -78,11 +84,15 @@ var Deserializer = function (params) {
                         }
                     });
                 } else {
-                    return Promise.reject(new Error('Please provide a template, or tell the developer to provide this script with a default one !'));
+                    return new Promise(function (resolve, reject) {
+                        reject(new Error('Please provide a template, or tell the developer to provide this script with a default one !'));
+                    });
                 }
                 break;
             default:
-                return Promise.reject(new RangeError("Unsupported sample version + " + version));
+                return new Promise(function (resolve, reject) {
+                    reject(new RangeError("Unsupported sample version: " + version));
+                });
         }
     };
     var prepareParams = function () {
