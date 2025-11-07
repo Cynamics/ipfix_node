@@ -1,6 +1,6 @@
 {
   "name": "ipfix_node",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "Ipfix flow deserializer in Node.JS",
   "main": "deserializer.js",
   "scripts": {
