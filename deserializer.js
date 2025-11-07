@@ -8,7 +8,8 @@ const VERSION_NETFLOW9 = 9
 const VERSION_NETFLOW7 = 7
 const VERSION_NETFLOW5 = 5
 
-var Deserializer = function (params) {
+var Deserializer = function (params)
+{
     var self = this;
     var defaultConf = {
         parseDataValues: true,
@@ -18,12 +19,14 @@ var Deserializer = function (params) {
     }
     this.Storage = require('./lib/storage/template_storage.js');
     this.conf = Object.assign(defaultConf, params);
-    this.deserialize = function (buffer) {
+    this.deserialize = function (buffer)
+    {
         const version = buffer.readUInt16BE(0);
         switch (version) {
             case VERSION_IPFIX:
                 if (typeof IpfixPacket == 'function') {
-                    return new Promise(function (resolve, reject) {
+                    return new Promise(function (resolve, reject)
+                    {
                         try {
                             var parseParams = prepareParams();
                             parseParams = Object.assign(parseParams, { buffer: buffer });
@@ -34,14 +37,15 @@ var Deserializer = function (params) {
                         }
                     });
                 } else {
-                    return new Promise(function (resolve, reject) {
-                        reject(new Error('Please provide a template, or tell the developer to provide this script with a default one !'));
-                    });
+                    return Promise.reject(
+                        new Error('Please provide a template, or tell the developer to provide this script with a default one !')
+                    );
                 }
                 break;
             case VERSION_NETFLOW9:
                 if (typeof Netflow9Packet == 'function') {
-                    return new Promise(function (resolve, reject) {
+                    return new Promise(function (resolve, reject)
+                    {
                         try {
                             var parseParams = prepareParams();
                             parseParams = Object.assign(parseParams, { buffer: buffer });
@@ -52,14 +56,15 @@ var Deserializer = function (params) {
                         }
                     });
                 } else {
-                    return new Promise(function (resolve, reject) {
-                        reject(new Error('Please provide a template, or tell the developer to provide this script with a default one !'));
-                    });
+                    return Promise.reject(
+                        new Error('Please provide a template, or tell the developer to provide this script with a default one !')
+                    );
                 }
                 break;
             case VERSION_NETFLOW7:
                 if (typeof Netflow7Packet == 'function') {
-                    return new Promise(function (resolve, reject) {
+                    return new Promise(function (resolve, reject)
+                    {
                         try {
                             var ParsedPacket = new Netflow7Packet(buffer);
                             resolve(ParsedPacket);
@@ -68,14 +73,15 @@ var Deserializer = function (params) {
                         }
                     });
                 } else {
-                    return new Promise(function (resolve, reject) { 
-                        reject(new Error('Please provide a template, or tell the developer to provide this script with a default one !'));
-                    });
+                    return Promise.reject(
+                        new Error('Please provide a template, or tell the developer to provide this script with a default one !')
+                    );
                 }
                 break;
             case VERSION_NETFLOW5:
                 if (typeof Netflow5Packet == 'function') {
-                    return new Promise(function (resolve, reject) {
+                    return new Promise(function (resolve, reject)
+                    {
                         try {
                             var ParsedPacket = new Netflow5Packet(buffer);
                             resolve(ParsedPacket);
@@ -84,18 +90,19 @@ var Deserializer = function (params) {
                         }
                     });
                 } else {
-                    return new Promise(function (resolve, reject) {
-                        reject(new Error('Please provide a template, or tell the developer to provide this script with a default one !'));
-                    });
+                    return Promise.reject(
+                        new Error('Please provide a template, or tell the developer to provide this script with a default one !')
+                    );
                 }
                 break;
             default:
-                return new Promise(function (resolve, reject) {
-                    reject(new RangeError(`Unsupported sample version: ${version}`));
-                });
+                return Promise.reject(
+                    new RangeError(`Unsupported sample version: ${version}`)
+                );
         }
     };
-    var prepareParams = function () {
+    var prepareParams = function ()
+    {
         var params = {};
         params = Object.assign(params, self.conf);
         if (typeof self.conf.templateProvider == 'undefined')
@@ -103,7 +110,8 @@ var Deserializer = function (params) {
 
         return params;
     }
-    var getStorageByType = function (type) {
+    var getStorageByType = function (type)
+    {
         if (type == 'DataTemplate')
             return Storage.DataTemplateMap;
         else if (type == 'OptionsTemplate')
@@ -112,7 +120,8 @@ var Deserializer = function (params) {
     return this;
 }
 
-module.exports = function (params) {
+module.exports = function (params)
+{
     var params = params || {};
     return new Deserializer(params);
 }
