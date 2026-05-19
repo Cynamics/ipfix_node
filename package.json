@@ -22,7 +22,7 @@
   ],
   "dependencies": {
     "lodash": "^4.17.15",
-    "ip-address": "^6.3.0"
+    "ip-address": "^10.2.0"
   },
   "author": "Gabs",
   "license": "ISC"
