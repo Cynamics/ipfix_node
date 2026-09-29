@@ -1,10 +1,10 @@
 {
   "name": "ipfix_node",
-  "version": "1.2.8",
+  "version": "1.2.9",
   "description": "Ipfix flow deserializer in Node.JS",
   "main": "deserializer.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --test test/*.test.js"
   },
   "repository": {
     "type": "git",
