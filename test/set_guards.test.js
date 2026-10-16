@@ -9,6 +9,7 @@ const SKIP_REASONS = require('../lib/packet_elements/skip_reasons');
 
 const empty = { records: 0, templates: [], optionsTemplates: [], withdrawals: [], skipped: [] };
 const withdrawn = (templateId, templateType) => ({ templateId, templateType });
+const skipped = (setId, templateId, reason) => ({ setId, templateId, reason });
 
 // RFC 7011 and RFC 3954 scope templates by observation domain (Observation Domain ID, Source ID): so does the internal
 // storage, one per process
@@ -23,14 +24,17 @@ test('ipfix: a withdrawal removes the template from its observation domain only'
     const result = await decodeWithin('ipfix: a withdrawal removes the template from its observation domain only');
 
     assert.deepStrictEqual(result.withdrawn, { ...empty, withdrawals: [withdrawn(256, 'DataTemplate')] });
-    assert.deepStrictEqual(result.first, empty);
+    assert.deepStrictEqual(result.first, { ...empty, skipped: [skipped(256, 256, SKIP_REASONS.UNKNOWN_TEMPLATE)] });
     assert.deepStrictEqual(result.second, { ...empty, records: 2 });
 });
 
 test('ipfix: a withdrawal of all templates removes those of its observation domain only', async () => {
     const { first, second } = await decodeWithin('ipfix: a withdrawal of all templates removes those of its observation domain only');
 
-    assert.deepStrictEqual(first, empty);
+    assert.deepStrictEqual(first, {
+        ...empty,
+        skipped: [skipped(256, 256, SKIP_REASONS.UNKNOWN_TEMPLATE), skipped(257, 257, SKIP_REASONS.UNKNOWN_TEMPLATE)],
+    });
     assert.deepStrictEqual(second, { ...empty, records: 2 });
 });
 
@@ -61,7 +65,7 @@ test('ipfix: a withdrawal callback that throws or rejects leaves the message rea
     assert.deepStrictEqual(packet, {
         ...empty,
         records: 2,
-        templates: [258],
+        templates: [256, 257, 258],
         withdrawals: [
             { ...withdrawn(256, 'DataTemplate'), error: 'storage down' },
             { ...withdrawn(257, 'DataTemplate'), error: 'storage down' },
@@ -92,7 +96,7 @@ for (const scenario of [
     test(scenario, async () => {
         const packet = await decodeWithin(scenario);
 
-        assert.deepStrictEqual(packet, { ...empty, records: 3, templates: [257] });
+        assert.deepStrictEqual(packet, { ...empty, records: 3, templates: [257], skipped: [skipped(256, 256, SKIP_REASONS.UNKNOWN_TEMPLATE)] });
     });
 }
 
@@ -101,20 +105,27 @@ test('ipfix: a withdrawal reaches onTemplateWithdrawal, never onNewTemplate', as
 
     assert.deepStrictEqual(calls.added, [{ templateId: 256, numberFields: 3 }]);
     assert.deepStrictEqual(calls.withdrawn, [withdrawn(256, 'DataTemplate')]);
-    assert.deepStrictEqual(packet, { ...empty, withdrawals: [withdrawn(256, 'DataTemplate')] });
+    assert.deepStrictEqual(packet, {
+        ...empty,
+        withdrawals: [withdrawn(256, 'DataTemplate')],
+        skipped: [skipped(256, 256, SKIP_REASONS.UNKNOWN_TEMPLATE)],
+    });
 });
 
 test('ipfix: an options template withdrawal is read as 4 bytes, the next record stays aligned', async () => {
     const packet = await decodeWithin('ipfix: an options template withdrawal is read as 4 bytes, the next record stays aligned');
 
-    assert.deepStrictEqual(packet, { ...empty, optionsTemplates: [301], withdrawals: [withdrawn(300, 'OptionsTemplate')] });
+    assert.deepStrictEqual(packet, { ...empty, optionsTemplates: [301], skipped: [skipped(3, 300, SKIP_REASONS.WITHDRAWAL_OVER_UDP)] });
 });
 
 test('ipfix: a template of zero-byte records is not stored, and its data set ends', async () => {
     const { calls, packet } = await decodeWithin('ipfix: a template of zero-byte records is not stored, and its data set ends');
 
     assert.deepStrictEqual(calls.added, []);
-    assert.deepStrictEqual(packet, { ...empty, skipped: [{ setId: 2, templateId: 256, reason: SKIP_REASONS.EMPTY_RECORD }] });
+    assert.deepStrictEqual(packet, {
+        ...empty,
+        skipped: [skipped(2, 256, SKIP_REASONS.EMPTY_RECORD), skipped(256, 256, SKIP_REASONS.UNKNOWN_TEMPLATE)],
+    });
 });
 
 for (const scenario of [
@@ -162,7 +173,10 @@ test('netflow9: a template of no fields is not stored', async () => {
     const { calls, packet } = await decodeWithin('netflow9: a template of no fields is not stored');
 
     assert.deepStrictEqual(calls.added, []);
-    assert.deepStrictEqual(packet, { ...empty, skipped: [{ setId: 0, templateId: 256, reason: SKIP_REASONS.EMPTY_RECORD }] });
+    assert.deepStrictEqual(packet, {
+        ...empty,
+        skipped: [skipped(0, 256, SKIP_REASONS.EMPTY_RECORD), skipped(256, 256, SKIP_REASONS.UNKNOWN_TEMPLATE)],
+    });
 });
 
 test('netflow9: a data flowset of a provided template of zero-byte records ends', async () => {
@@ -213,9 +227,10 @@ test('ipfix: an options template record shorter than its header ends the set', a
 });
 
 test('ipfix: a variable-length value of 0 bytes is read, one cut short ends the set', async () => {
-    const records = await decodeWithin('ipfix: a variable-length value of 0 bytes is read, one cut short ends the set');
+    const { records, skipped: skips } = await decodeWithin('ipfix: a variable-length value of 0 bytes is read, one cut short ends the set');
 
     assert.deepStrictEqual(records, [{ sizeInBytes: 1 + 0 + 4, nameBytes: 0, octets: '1500' }]);
+    assert.deepStrictEqual(skips, [skipped(401, 401, SKIP_REASONS.RECORD_PAST_SET)]);
 });
 
 for (const scenario of [
@@ -246,3 +261,122 @@ test('netflow9: a field of 65535 bytes is not read as a variable-length field', 
 
     assert.deepStrictEqual(packet, { ...empty, templates: [273] });
 });
+
+// RFC 7011 section 8.4: Template Withdrawals MUST NOT be sent over UDP, and a collector over UDP MUST ignore them. A
+// stray or forged message would otherwise remove an exporter's templates.
+test('ipfix: a withdrawal received over UDP is ignored and listed', async () => {
+    const { stored, kept, calls } = await decodeWithin('ipfix: a withdrawal received over UDP is ignored and listed');
+
+    assert.deepStrictEqual(stored, {
+        ...empty,
+        records: 2,
+        skipped: [skipped(2, 256, SKIP_REASONS.WITHDRAWAL_OVER_UDP), skipped(2, 2, SKIP_REASONS.WITHDRAWAL_OVER_UDP)],
+    });
+    assert.deepStrictEqual(kept, { ...empty, records: 2, skipped: [skipped(2, 256, SKIP_REASONS.WITHDRAWAL_OVER_UDP)] });
+    assert.deepStrictEqual(calls.withdrawn, []);
+});
+
+// The internal storage is one per process: NetFlow v9 and IPFIX templates of one domain id are not the same templates
+test('ipfix: a withdrawal of all templates leaves the NetFlow v9 templates of the same domain id', async () => {
+    const { withdrawn: packet, netflow9 } = await decodeWithin('ipfix: a withdrawal of all templates leaves the NetFlow v9 templates of the same domain id');
+
+    assert.deepStrictEqual(packet, { ...empty, withdrawals: [withdrawn(2, 'DataTemplate')], skipped: [skipped(400, 400, SKIP_REASONS.UNKNOWN_TEMPLATE)] });
+    assert.deepStrictEqual(netflow9, { ...empty, records: 2 });
+});
+
+// RFC 7011 section 3.4.1: a template id is unique to its transport session and observation domain
+test('ipfix: templates of one id from two transport sessions are kept apart', async () => {
+    const { before, after, withdrawn: packet, unscoped } = await decodeWithin('ipfix: templates of one id from two transport sessions are kept apart');
+
+    assert.deepStrictEqual(before, { ...empty, records: 2 });
+    assert.deepStrictEqual(after, { ...empty, records: 2 });
+    assert.deepStrictEqual(packet, { ...empty, skipped: [skipped(256, 256, SKIP_REASONS.UNKNOWN_TEMPLATE)] });
+    assert.deepStrictEqual(unscoped, { ...empty, skipped: [skipped(256, 256, SKIP_REASONS.UNKNOWN_TEMPLATE)] });
+});
+
+// An asynchronous onNewTemplate that rejects was an unhandled rejection, which ends a Node process by default
+test('ipfix: a template callback that throws or rejects leaves the message read', async () => {
+    const { errors, ...packet } = await decodeWithin('ipfix: a template callback that throws or rejects leaves the message read');
+
+    assert.deepStrictEqual(packet, { ...empty, records: 2, templates: [256, 257, 258] });
+    assert.deepStrictEqual(errors, ['storage down', 'storage down', undefined]);
+});
+
+// RFC 7011 section 3.3.1: a set may end with zero padding shorter than any record of the set
+test('ipfix: zero padding after the records of a data set is not read', async () => {
+    const packet = await decodeWithin('ipfix: zero padding after the records of a data set is not read');
+
+    assert.deepStrictEqual(packet, { ...empty, records: 3, templates: [300, 301] });
+});
+
+// A template id names one template of its domain, a template or an options template
+test('ipfix: a template id redefined with the other kind replaces the template', async () => {
+    const { toOptions, toData } = await decodeWithin('ipfix: a template id redefined with the other kind replaces the template');
+
+    assert.deepStrictEqual(toOptions, [[149, 34]]);
+    assert.deepStrictEqual(toData, [[8, 12, 1]]);
+});
+
+// As for onNewTemplate and onTemplateWithdrawal, the packet is `this`: its header gives the observation domain
+test('ipfix: the templateProvider is called with the packet as this', async () => {
+    const calls = await decodeWithin('ipfix: the templateProvider is called with the packet as this');
+
+    assert.deepStrictEqual(calls, [{ templateId: 256, version: 10, domain: 7 }, { templateId: 257, version: 9, domain: 8 }]);
+});
+
+for (const [scenario, setId] of [
+    ['ipfix: a data set of an unknown template is listed', 256],
+    ['netflow9: a data flowset of an unknown template is listed', 256],
+]) {
+    test(scenario, async () => {
+        const packet = await decodeWithin(scenario);
+
+        assert.deepStrictEqual(packet, { ...empty, skipped: [skipped(setId, setId, SKIP_REASONS.UNKNOWN_TEMPLATE)] });
+    });
+}
+
+// Template ids 0 to 255 are reserved (RFC 7011 section 3.4.1, RFC 3954 section 5.2): no data set can use one
+test('ipfix: a template of a reserved id is listed', async () => {
+    const { calls, packet } = await decodeWithin('ipfix: a template of a reserved id is listed');
+
+    assert.deepStrictEqual(calls.added, []);
+    assert.deepStrictEqual(packet, {
+        ...empty,
+        skipped: [skipped(2, 100, SKIP_REASONS.RESERVED_TEMPLATE), skipped(3, 255, SKIP_REASONS.RESERVED_TEMPLATE)],
+    });
+});
+
+test('netflow9: a template of a reserved id is listed', async () => {
+    const { calls, packet } = await decodeWithin('netflow9: a template of a reserved id is listed');
+
+    assert.deepStrictEqual(calls.added, []);
+    assert.deepStrictEqual(packet, { ...empty, skipped: [skipped(0, 100, SKIP_REASONS.RESERVED_TEMPLATE)] });
+});
+
+// RFC 7011 section 8.1: a withdrawal of a template the collector does not have MUST be ignored and SHOULD be logged
+test('ipfix: a withdrawal of a template not stored is ignored and listed', async () => {
+    const { internal, external, calls } = await decodeWithin('ipfix: a withdrawal of a template not stored is ignored and listed');
+
+    assert.deepStrictEqual(internal, {
+        ...empty,
+        records: 1,
+        templates: [258],
+        skipped: [skipped(2, 256, SKIP_REASONS.UNKNOWN_WITHDRAWAL), skipped(3, 258, SKIP_REASONS.UNKNOWN_WITHDRAWAL)],
+    });
+    assert.deepStrictEqual(external, { ...empty, skipped: [skipped(2, 257, SKIP_REASONS.UNKNOWN_WITHDRAWAL)] });
+    assert.deepStrictEqual(calls.withdrawn, []);
+});
+
+for (const [scenario, setId] of [
+    ['ipfix: an options template of zero-byte records is not stored', 3],
+    ['netflow9: an options template of zero-byte records is not stored', 1],
+]) {
+    test(scenario, async () => {
+        const packet = await decodeWithin(scenario);
+
+        assert.deepStrictEqual(packet, {
+            ...empty,
+            skipped: [skipped(setId, 256, SKIP_REASONS.EMPTY_RECORD), skipped(256, 256, SKIP_REASONS.UNKNOWN_TEMPLATE)],
+        });
+    });
+}

@@ -19,10 +19,15 @@ var Deserializer = function (params)
         // template id of 2 or 3 withdraws all templates of the kind
         onTemplateWithdrawal: undefined,
         useInternalStorage: true,
+        // The transport the messages arrive over: "udp", "tcp" or "sctp". Template withdrawals are honored over TCP and
+        // SCTP only: a collector over UDP MUST ignore them (RFC 7011 section 8.4)
+        transport: 'udp',
     }
     this.Storage = require('./lib/storage/template_storage.js');
     this.conf = Object.assign(defaultConf, params);
-    this.deserialize = function (buffer)
+    // session (optional): the transport session the message arrived on, such as the exporter's address and port. The
+    // internal storage keeps the templates of each session apart, as RFC 7011 scopes them.
+    this.deserialize = function (buffer, session)
     {
         const version = buffer.readUInt16BE(0);
         switch (version) {
@@ -31,7 +36,7 @@ var Deserializer = function (params)
                     return new Promise(function (resolve, reject)
                     {
                         try {
-                            var parseParams = prepareParams();
+                            var parseParams = prepareParams(session);
                             parseParams = Object.assign(parseParams, { buffer: buffer });
                             var ParsedPacket = new IpfixPacket(parseParams);
                             resolve(ParsedPacket);
@@ -50,7 +55,7 @@ var Deserializer = function (params)
                     return new Promise(function (resolve, reject)
                     {
                         try {
-                            var parseParams = prepareParams();
+                            var parseParams = prepareParams(session);
                             parseParams = Object.assign(parseParams, { buffer: buffer });
                             var ParsedPacket = new Netflow9Packet(parseParams);
                             resolve(ParsedPacket);
@@ -104,10 +109,10 @@ var Deserializer = function (params)
                 );
         }
     };
-    var prepareParams = function ()
+    var prepareParams = function (session)
     {
         var params = {};
-        params = Object.assign(params, self.conf);
+        params = Object.assign(params, self.conf, { session: session });
         // The internal storage is used whenever it is on, a templateProvider given or not, as the packets read it then
         if (self.conf.useInternalStorage)
             params = Object.assign(params, { templates: self.Storage });
