@@ -608,6 +608,32 @@ const scenarios = {
 
         return summary(await decoder.deserialize(ipfixMessage([set(256, flowRecords(2))]))); // 24 bytes: 3 records of 8
     },
+    'ipfix: the callbacks read the session of the message': async () => {
+        // One store for every exporter, keyed by session
+        const templates = new Map();
+        const decoder = Netflow({
+            useInternalStorage: false,
+            session: 'option',
+            onNewTemplate: function (template) {
+                templates.set(`${this.Session}:${template.templateId}`, template);
+            },
+            templateProvider: function (templateId) {
+                return templates.get(`${this.Session}:${templateId}`);
+            },
+        });
+        await decoder.deserialize(ipfixMessage([set(2, templateRecord(256, FLOW_FIELDS))]), 'exporter-a');
+        await decoder.deserialize(ipfixMessage([set(2, templateRecord(256, [[8, 4], [12, 4]]))]), 'exporter-b');
+        const a = await decoder.deserialize(ipfixMessage([set(256, flowRecords(2))]), 'exporter-a'); // 2 records of 12
+        const b = await decoder.deserialize(ipfixMessage([set(256, flowRecords(2))]), 'exporter-b'); // 3 records of 8
+        const option = await decoder.deserialize(ipfixMessage([set(256, flowRecords(2))]));
+        return { a: summary(a), b: summary(b), sessions: [a.Session, b.Session, option.Session] };
+    },
+    'ipfix: endSession of an external-storage deserializer leaves the internal storage alone': async () => {
+        const internal = Netflow();
+        await internal.deserialize(ipfixMessage([set(2, templateRecord(256, FLOW_FIELDS))]), 'exporter-1');
+        Netflow({ useInternalStorage: false, onNewTemplate: () => {}, templateProvider: () => undefined }).endSession('exporter-1');
+        return summary(await internal.deserialize(ipfixMessage([set(256, flowRecords(2))]), 'exporter-1'));
+    },
 };
 
 module.exports = scenarios;

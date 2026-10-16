@@ -8,7 +8,6 @@ const VERSION_IPFIX = 10
 const VERSION_NETFLOW9 = 9
 const VERSION_NETFLOW7 = 7
 const VERSION_NETFLOW5 = 5
-const TRANSPORTS = ['udp', 'tcp', 'sctp']
 
 var Deserializer = function (params)
 {
@@ -31,7 +30,7 @@ var Deserializer = function (params)
     this.conf = Object.assign(defaultConf, params);
     // A misspelled transport would turn template withdrawals off without a word: it is read in any case, and checked
     this.conf.transport = this.conf.transport == null ? 'udp' : String(this.conf.transport).trim().toLowerCase();
-    if (TRANSPORTS.indexOf(this.conf.transport) < 0)
+    if (TemplateStore.TRANSPORTS.indexOf(this.conf.transport) < 0)
         throw new Error(`Unsupported transport '${params.transport}': use 'udp', 'tcp' or 'sctp'`);
 
     // Without the internal storage the caller keeps the templates: checked once here, not on every message
@@ -42,7 +41,8 @@ var Deserializer = function (params)
         throw new Error('With useInternalStorage:false, give a templateProvider function to return the stored templates');
 
     // Over TCP and SCTP template withdrawals are honored: the caller removes the templates it keeps
-    if (!this.conf.useInternalStorage && this.conf.transport !== 'udp' && typeof this.conf.onTemplateWithdrawal !== 'function')
+    var withdrawing = TemplateStore.WITHDRAWING_TRANSPORTS.indexOf(this.conf.transport) >= 0;
+    if (!this.conf.useInternalStorage && withdrawing && typeof this.conf.onTemplateWithdrawal !== 'function')
         throw new Error(`With useInternalStorage:false over ${this.conf.transport}, give an onTemplateWithdrawal function to remove the withdrawn templates`);
 
     // With the caller's own storage, the templates and withdrawals whose callback has not settled: the next messages
@@ -146,12 +146,13 @@ var Deserializer = function (params)
 
         return params;
     }
-    // Removes every template of a transport session from the internal storage, and the session's pending ones: call it
-    // when a TCP connection or an SCTP association ends, as that withdraws all of its templates (RFC 7011 section 8.1).
-    // Without a session, that of the options, as for deserialize.
+    // Removes every template of a transport session from the internal storage, when this deserializer uses it, and the
+    // session's pending ones: call it when a TCP connection or an SCTP association ends, as that withdraws all of its
+    // templates (RFC 7011 section 8.1). Without a session, that of the options, as for deserialize.
     this.endSession = function (session)
     {
-        TemplateStore.endSession(self.Storage, pending, session !== undefined ? session : self.conf.session);
+        var storage = self.conf.useInternalStorage ? self.Storage : null;
+        TemplateStore.endSession(storage, pending, session !== undefined ? session : self.conf.session);
     };
     return this;
 }

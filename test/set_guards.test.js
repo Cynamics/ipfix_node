@@ -549,3 +549,18 @@ test('ipfix: the latest definition is read while an earlier write still runs', a
 
     assert.deepStrictEqual(packet, { ...empty, records: 3 });
 });
+
+// A caller keeping its own templates scopes them by session as the internal storage does: the packet carries it
+test('ipfix: the callbacks read the session of the message', async () => {
+    const { a, b, sessions } = await decodeWithin('ipfix: the callbacks read the session of the message');
+
+    assert.deepStrictEqual(a, { ...empty, records: 2 });
+    assert.deepStrictEqual(b, { ...empty, records: 3 });
+    assert.deepStrictEqual(sessions, ['exporter-a', 'exporter-b', 'option']);
+});
+
+test('ipfix: endSession of an external-storage deserializer leaves the internal storage alone', async () => {
+    const packet = await decodeWithin('ipfix: endSession of an external-storage deserializer leaves the internal storage alone');
+
+    assert.deepStrictEqual(packet, { ...empty, records: 2 });
+});
