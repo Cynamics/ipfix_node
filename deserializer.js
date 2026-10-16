@@ -2,11 +2,13 @@ var IpfixPacket = require('./lib/packet_elements/ipfix/ipfix_packet');
 var Netflow9Packet = require('./lib/packet_elements/netflow9/netflow9_packet');
 var Netflow7Packet = require('./lib/packet_elements/netflow7/netflow7_packet');
 var Netflow5Packet = require('./lib/packet_elements/netflow5/netflow5_packet');
+var TemplateStore = require('./lib/packet_elements/template_store');
 
 const VERSION_IPFIX = 10
 const VERSION_NETFLOW9 = 9
 const VERSION_NETFLOW7 = 7
 const VERSION_NETFLOW5 = 5
+const TRANSPORTS = ['udp', 'tcp', 'sctp']
 
 var Deserializer = function (params)
 {
@@ -22,13 +24,23 @@ var Deserializer = function (params)
         // The transport the messages arrive over: "udp", "tcp" or "sctp". Template withdrawals are honored over TCP and
         // SCTP only: a collector over UDP MUST ignore them (RFC 7011 section 8.4)
         transport: 'udp',
+        // The transport session of every message, when deserialize is given none (see deserialize)
+        session: undefined,
     }
     this.Storage = require('./lib/storage/template_storage.js');
     this.conf = Object.assign(defaultConf, params);
+    // A misspelled transport would turn template withdrawals off without a word: it is read in any case, and checked
+    this.conf.transport = this.conf.transport == null ? 'udp' : String(this.conf.transport).trim().toLowerCase();
+    if (TRANSPORTS.indexOf(this.conf.transport) < 0)
+        throw new Error(`Unsupported transport '${params.transport}': use 'udp', 'tcp' or 'sctp'`);
+
     // session (optional): the transport session the message arrived on, such as the exporter's address and port. The
     // internal storage keeps the templates of each session apart, as RFC 7011 scopes them.
     this.deserialize = function (buffer, session)
     {
+        if (!Buffer.isBuffer(buffer) || buffer.byteLength < 2)
+            return Promise.reject(new RangeError('A message holds at least its 2-byte version'));
+
         const version = buffer.readUInt16BE(0);
         switch (version) {
             case VERSION_IPFIX:
@@ -112,13 +124,19 @@ var Deserializer = function (params)
     var prepareParams = function (session)
     {
         var params = {};
-        params = Object.assign(params, self.conf, { session: session });
+        params = Object.assign(params, self.conf, { session: session !== undefined ? session : self.conf.session });
         // The internal storage is used whenever it is on, a templateProvider given or not, as the packets read it then
         if (self.conf.useInternalStorage)
             params = Object.assign(params, { templates: self.Storage });
 
         return params;
     }
+    // Removes every template of a transport session from the internal storage: call it when a TCP connection or an SCTP
+    // association ends, as that withdraws all of its templates (RFC 7011 section 8.1)
+    this.endSession = function (session)
+    {
+        TemplateStore.endSession(self.Storage, session);
+    };
     var getStorageByType = function (type)
     {
         if (type == 'DataTemplate')

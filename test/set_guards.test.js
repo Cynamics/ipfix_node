@@ -380,3 +380,90 @@ for (const [scenario, setId] of [
         });
     });
 }
+
+// RFC 7011 section 8.1: templates and withdrawals take effect in the order they appear in the message, whenever the
+// caller's own storage catches up
+test('ipfix: with external storage, the templates and withdrawals of a message apply to its later data sets', async () => {
+    const { packet, calls } = await decodeWithin('ipfix: with external storage, the templates and withdrawals of a message apply to its later data sets');
+
+    assert.deepStrictEqual(packet, {
+        ...empty,
+        records: 2,
+        templates: [256],
+        withdrawals: [withdrawn(256, 'DataTemplate'), withdrawn(2, 'DataTemplate')],
+        skipped: [skipped(256, 256, SKIP_REASONS.UNKNOWN_TEMPLATE), skipped(257, 257, SKIP_REASONS.UNKNOWN_TEMPLATE)],
+    });
+    assert.deepStrictEqual(calls.withdrawn, [withdrawn(256, 'DataTemplate'), withdrawn(2, 'DataTemplate')]);
+});
+
+// RFC 7011 section 8.1: the end of a TCP or SCTP session withdraws all of its templates
+test('ipfix: ending a transport session removes its templates only', async () => {
+    const { kept, ended, other } = await decodeWithin('ipfix: ending a transport session removes its templates only');
+
+    assert.deepStrictEqual(kept, { ...empty, records: 2 });
+    assert.deepStrictEqual(ended, { ...empty, skipped: [skipped(256, 256, SKIP_REASONS.UNKNOWN_TEMPLATE)] });
+    assert.deepStrictEqual(other, { ...empty, records: 2 });
+});
+
+test('ipfix: a templateProvider that throws leaves its data set unread and the message read', async () => {
+    const packet = await decodeWithin('ipfix: a templateProvider that throws leaves its data set unread and the message read');
+
+    assert.deepStrictEqual(packet, {
+        ...empty,
+        records: 3,
+        templates: [257],
+        skipped: [{ ...skipped(256, 256, SKIP_REASONS.PROVIDER_ERROR), error: 'cache reloading' }],
+    });
+});
+
+// RFC 7011 section 3.1: the message ends at its Length; over TCP a read may hold the next message too
+test('ipfix: the bytes after the message length are not read as sets', async () => {
+    const packet = await decodeWithin('ipfix: the bytes after the message length are not read as sets');
+
+    assert.deepStrictEqual(packet, { ...empty, records: 2, templates: [256], skipped: [{ reason: SKIP_REASONS.MESSAGE_LENGTH }] });
+});
+
+test('ipfix: an options template withdrawal of a template is ignored with external storage', async () => {
+    const { packet, calls } = await decodeWithin('ipfix: an options template withdrawal of a template is ignored with external storage');
+
+    assert.deepStrictEqual(packet, { ...empty, records: 2, skipped: [skipped(3, 300, SKIP_REASONS.UNKNOWN_WITHDRAWAL)] });
+    assert.deepStrictEqual(calls.withdrawn, []);
+});
+
+test('ipfix: the transport is checked and read in any case', async () => {
+    const result = await decodeWithin('ipfix: the transport is checked and read in any case');
+
+    assert.match(result.typo, /tpc/);
+    assert.deepStrictEqual({ ...result, typo: undefined }, { typo: undefined, upper: 1, sctp: 1, unset: 0 });
+});
+
+test('ipfix: a session given in the options scopes every message', async () => {
+    const { scoped, unscoped, overridden } = await decodeWithin('ipfix: a session given in the options scopes every message');
+
+    assert.deepStrictEqual(scoped, { ...empty, records: 2 });
+    assert.deepStrictEqual(unscoped, { ...empty, skipped: [skipped(256, 256, SKIP_REASONS.UNKNOWN_TEMPLATE)] });
+    assert.deepStrictEqual(overridden, { ...empty, skipped: [skipped(256, 256, SKIP_REASONS.UNKNOWN_TEMPLATE)] });
+});
+
+test('ipfix: a template the callback freezes leaves the message read', async () => {
+    const packet = await decodeWithin('ipfix: a template the callback freezes leaves the message read');
+
+    assert.deepStrictEqual(packet, { ...empty, records: 2, templates: [256] });
+});
+
+test('ipfix: a length prefix past the end of the set is reported with its template', async () => {
+    const packet = await decodeWithin('ipfix: a length prefix past the end of the set is reported with its template');
+
+    assert.deepStrictEqual(packet, { ...empty, templates: [402], skipped: [skipped(402, 402, SKIP_REASONS.RECORD_PAST_SET)] });
+});
+
+test('a message too short for its version is rejected, not thrown', async () => {
+    assert.strictEqual(await decodeWithin('a message too short for its version is rejected, not thrown'), 'rejected: RangeError');
+});
+
+// DataSetRecord reads the fields by position: a provider may hold them as an object, as 1.2.9 read them
+test('netflow9: a provided template whose fields are held by position is read', async () => {
+    const packet = await decodeWithin('netflow9: a provided template whose fields are held by position is read');
+
+    assert.deepStrictEqual(packet, { ...empty, records: 2 });
+});

@@ -363,6 +363,120 @@ const scenarios = {
             set(1, Buffer.concat([head, Buffer.from([0x00, 0x01, 0x00, 0x00])])), set(256, flowRecords(1)),
         ])));
     },
+    'ipfix: with external storage, the templates and withdrawals of a message apply to its later data sets': async () => {
+        // The caller stores and removes templates only after an await, as flow-shipper does after its Mongo write
+        const { options, calls } = externalStorage(TCP);
+        const later = action => new Promise(resolve => setTimeout(() => resolve(action()), 10));
+        const store = options.onNewTemplate;
+        const remove = options.onTemplateWithdrawal;
+        options.onNewTemplate = template => later(() => store(template));
+        options.onTemplateWithdrawal = (templateId, templateType) => later(() => remove(templateId, templateType));
+        const decoder = Netflow(options);
+        const defined = await decoder.deserialize(ipfixMessage([set(2, templateRecord(257, FLOW_FIELDS))]));
+        await Promise.all(defined.TemplateSets.map(template => template.settled));
+        const packet = await decoder.deserialize(ipfixMessage([
+            set(2, templateRecord(256, FLOW_FIELDS)),
+            set(256, flowRecords(2)),
+            set(2, withdrawal(256)),
+            set(256, flowRecords(2)),
+            set(2, withdrawal(2)),
+            set(257, flowRecords(2)),
+        ]));
+        await Promise.all(packet.TemplateWithdrawals.map(withdrawn => withdrawn.settled));
+        return { packet: summary(packet), calls };
+    },
+    'ipfix: ending a transport session removes its templates only': async () => {
+        const decoder = Netflow(TCP);
+        // A session may hold "/": one that starts with another session and "/" is still another session
+        const [first, second] = ['site/a', 'site/a/b'];
+        await decoder.deserialize(ipfixMessage([set(2, templateRecord(256, FLOW_FIELDS))]), first);
+        await decoder.deserialize(ipfixMessage([set(2, templateRecord(256, FLOW_FIELDS))]), second);
+        await decoder.deserialize(ipfixMessage([set(2, withdrawal(2))]), second);
+        const kept = await decoder.deserialize(ipfixMessage([set(256, flowRecords(2))]), first);
+        await decoder.deserialize(ipfixMessage([set(2, templateRecord(258, FLOW_FIELDS))]), second);
+        decoder.endSession(first);
+        const ended = await decoder.deserialize(ipfixMessage([set(256, flowRecords(2))]), first);
+        const other = await decoder.deserialize(ipfixMessage([set(258, flowRecords(2))]), second);
+        return { kept: summary(kept), ended: summary(ended), other: summary(other) };
+    },
+    'ipfix: a templateProvider that throws leaves its data set unread and the message read': async () => {
+        const { options } = externalStorage();
+        const provide = options.templateProvider;
+        options.templateProvider = templateId => {
+            if (templateId === 256) {
+                throw new Error('cache reloading');
+            }
+
+            return provide(templateId);
+        };
+        return summary(await Netflow(options).deserialize(ipfixMessage([
+            set(256, flowRecords(2)), set(2, templateRecord(257, FLOW_FIELDS)), set(257, flowRecords(3)),
+        ])));
+    },
+    'ipfix: the bytes after the message length are not read as sets': async () => summary(
+        await Netflow().deserialize(Buffer.concat([
+            ipfixMessage([set(2, templateRecord(256, FLOW_FIELDS)), set(256, flowRecords(2))]),
+            ipfixMessage([set(256, flowRecords(3))]),
+        ]))
+    ),
+    'ipfix: an options template withdrawal of a template is ignored with external storage': async () => {
+        const { options, calls } = externalStorage(TCP);
+        const decoder = Netflow(options);
+        await decoder.deserialize(ipfixMessage([set(2, templateRecord(300, FLOW_FIELDS))]));
+        const packet = await decoder.deserialize(ipfixMessage([set(3, withdrawal(300)), set(300, flowRecords(2))]));
+        return { packet: summary(packet), calls };
+    },
+    'ipfix: the transport is checked and read in any case': async () => {
+        const withdrawals = async transport => {
+            const decoder = Netflow({ transport });
+            await decoder.deserialize(ipfixMessage([set(2, templateRecord(256, FLOW_FIELDS))]));
+            return (await decoder.deserialize(ipfixMessage([set(2, withdrawal(256))]))).TemplateWithdrawals.length;
+        };
+        let typo;
+        try {
+            Netflow({ transport: 'tpc' });
+        } catch (error) {
+            typo = error.message;
+        }
+
+        return { typo, upper: await withdrawals(' TCP '), sctp: await withdrawals('sctp'), unset: await withdrawals(undefined) };
+    },
+    'ipfix: a session given in the options scopes every message': async () => {
+        await Netflow({ session: 'exporter-1' }).deserialize(ipfixMessage([set(2, templateRecord(256, FLOW_FIELDS))]));
+        const scoped = await Netflow({ session: 'exporter-1' }).deserialize(ipfixMessage([set(256, flowRecords(2))]));
+        const unscoped = await Netflow().deserialize(ipfixMessage([set(256, flowRecords(2))]));
+        const overridden = await Netflow({ session: 'exporter-1' }).deserialize(ipfixMessage([set(256, flowRecords(2))]), 'exporter-2');
+        return { scoped: summary(scoped), unscoped: summary(unscoped), overridden: summary(overridden) };
+    },
+    'ipfix: a template the callback freezes leaves the message read': async () => {
+        const { options } = externalStorage();
+        const store = options.onNewTemplate;
+        options.onNewTemplate = template => store(Object.freeze(template));
+        const packet = await Netflow(options).deserialize(ipfixMessage([set(2, templateRecord(256, FLOW_FIELDS)), set(256, flowRecords(2))]));
+        await Promise.all(packet.TemplateSets.map(template => template.settled));
+        return summary(packet);
+    },
+    'ipfix: a length prefix past the end of the set is reported with its template': async () => summary(
+        await Netflow().deserialize(ipfixMessage([
+            set(2, templateRecord(402, [[82, 0xffff], [83, 0xffff]])),
+            set(402, Buffer.from([200, 0x61])), // a name of 200 bytes, and the next prefix past the set
+        ]))
+    ),
+    'a message too short for its version is rejected, not thrown': async () => {
+        try {
+            return await Netflow().deserialize(Buffer.alloc(1)).then(() => 'resolved', error => `rejected: ${error.name}`);
+        } catch (error) {
+            return `threw: ${error.name}`;
+        }
+    },
+    'netflow9: a provided template whose fields are held by position is read': async () => {
+        const FieldSpecifiers = { 0: { fieldId: 8, fieldLength: 4 }, 1: { fieldId: 12, fieldLength: 4 }, 2: { fieldId: 1, fieldLength: 4 } };
+        return summary(await Netflow({
+            useInternalStorage: false,
+            onNewTemplate: () => {},
+            templateProvider: templateId => ({ templateId, numberFields: 3, dataRecordSizeInBytes: 12, FieldSpecifiers }),
+        }).deserialize(netflow9Message([set(256, flowRecords(2))])));
+    },
 };
 
 module.exports = scenarios;
