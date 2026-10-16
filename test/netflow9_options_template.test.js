@@ -1,29 +1,7 @@
 const test = require('node:test');
 const assert = require('node:assert');
 const Netflow = require('../deserializer');
-
-// A NetFlow v9 header (RFC 3954 section 5.1): version, count, uptime, seconds, sequence, source id.
-const header = count => {
-    const buffer = Buffer.alloc(20);
-    buffer.writeUInt16BE(9, 0);
-    buffer.writeUInt16BE(count, 2);
-    return buffer;
-};
-
-// A flowset: its id, its length including this 4-byte header, the body, then zero padding.
-const flowSet = (id, body, padding = 0) => {
-    const head = Buffer.alloc(4);
-    head.writeUInt16BE(id, 0);
-    head.writeUInt16BE(4 + body.length + padding, 2);
-    return Buffer.concat([head, body, Buffer.alloc(padding)]);
-};
-
-const fields = list => Buffer.concat(list.map(([type, length]) => {
-    const field = Buffer.alloc(4);
-    field.writeUInt16BE(type, 0);
-    field.writeUInt16BE(length, 2);
-    return field;
-}));
+const { fields, set, netflow9Message } = require('./helpers/messages');
 
 // A sampler options table as a Cisco router sends it: scope System, then sampler id, mode, random interval
 // and name. The two lengths after the template id are in bytes (RFC 3954 section 6.1), not field counts.
@@ -48,7 +26,7 @@ const optionsRecord = () => {
 };
 
 test('reads a NetFlow v9 options template by its scope and option lengths', async () => {
-    const packet = Buffer.concat([header(2), flowSet(1, optionsTemplate(300)), flowSet(300, optionsRecord())]);
+    const packet = netflow9Message([set(1, optionsTemplate(300)), set(300, optionsRecord())]);
     const parsed = await Netflow().deserialize(packet);
 
     const template = parsed.OptionsTemplateSets[0];
@@ -72,14 +50,14 @@ test('reads a sampler table of one scope and three option fields as before', asy
     head.writeUInt16BE(4, 2);
     head.writeUInt16BE(12, 4);
     const template = Buffer.concat([head, fields([[1, 4], [48, 1], [49, 1], [50, 4]])]);
-    const parsed = await Netflow().deserialize(Buffer.concat([header(1), flowSet(1, template)]));
+    const parsed = await Netflow().deserialize(netflow9Message([set(1, template)]));
 
     assert.deepStrictEqual(parsed.OptionsTemplateSets[0].FieldSpecifiers.map(field => field.fieldId), [1, 48, 49, 50]);
     assert.strictEqual(parsed.OptionsTemplateSets[0].scopeFieldCount, 1);
 });
 
 test('stops at the padding that ends a NetFlow v9 options template flowset', async () => {
-    const packet = Buffer.concat([header(1), flowSet(1, optionsTemplate(301), 2)]);
+    const packet = netflow9Message([set(1, optionsTemplate(301), 2)]);
     const parsed = await Netflow().deserialize(packet);
 
     assert.deepStrictEqual(parsed.OptionsTemplateSets.map(template => template.templateId), [301]);
