@@ -10,14 +10,28 @@ const SKIP_REASONS = require('../lib/packet_elements/skip_reasons');
 const empty = { records: 0, templates: [], optionsTemplates: [], withdrawals: [], skipped: [] };
 const withdrawn = (templateId, templateType) => ({ templateId, templateType });
 
-// The internal storage is one per process: removing the template would stop another exporter's data of that id, and an
-// exporter announces a template again before it sends data of its id
-test('ipfix: a withdrawal is reported, and the internal storage, shared by every exporter, keeps the template', async () => {
-    const result = await decodeWithin('ipfix: a withdrawal is reported, and the internal storage, shared by every exporter, keeps the template');
+// RFC 7011 and RFC 3954 scope templates by observation domain (Observation Domain ID, Source ID): so does the internal
+// storage, one per process
+test('ipfix: templates of one id in two observation domains are kept apart', async () => {
+    const { first, second } = await decodeWithin('ipfix: templates of one id in two observation domains are kept apart');
 
-    assert.deepStrictEqual(result.before, { ...empty, records: 2, templates: [256] });
+    assert.deepStrictEqual(first, { ...empty, records: 2 });
+    assert.deepStrictEqual(second, { ...empty, records: 3 });
+});
+
+test('ipfix: a withdrawal removes the template from its observation domain only', async () => {
+    const result = await decodeWithin('ipfix: a withdrawal removes the template from its observation domain only');
+
     assert.deepStrictEqual(result.withdrawn, { ...empty, withdrawals: [withdrawn(256, 'DataTemplate')] });
-    assert.deepStrictEqual(result.after, { ...empty, records: 2 });
+    assert.deepStrictEqual(result.first, empty);
+    assert.deepStrictEqual(result.second, { ...empty, records: 2 });
+});
+
+test('ipfix: a withdrawal of all templates removes those of its observation domain only', async () => {
+    const { first, second } = await decodeWithin('ipfix: a withdrawal of all templates removes those of its observation domain only');
+
+    assert.deepStrictEqual(first, empty);
+    assert.deepStrictEqual(second, { ...empty, records: 2 });
 });
 
 // RFC 7011 section 8.1: a template id of 2 in a template set (3 in an options template set) withdraws all of them
@@ -29,10 +43,16 @@ test('ipfix: a withdrawal of all templates is passed on with the set id', async 
     assert.deepStrictEqual(packet, { ...empty, withdrawals: all });
 });
 
-test('ipfix: a record of no field and a reserved id other than the set id is ignored', async () => {
-    const packet = await decodeWithin('ipfix: a record of no field and a reserved id other than the set id is ignored');
+test('ipfix: a record of no field and a reserved id other than the set id is listed', async () => {
+    const packet = await decodeWithin('ipfix: a record of no field and a reserved id other than the set id is listed');
 
-    assert.deepStrictEqual(packet, empty);
+    assert.deepStrictEqual(packet, {
+        ...empty,
+        skipped: [
+            { setId: 2, templateId: 100, reason: SKIP_REASONS.RESERVED_WITHDRAWAL },
+            { setId: 3, templateId: 4, reason: SKIP_REASONS.RESERVED_WITHDRAWAL },
+        ],
+    });
 });
 
 test('ipfix: a withdrawal callback that throws or rejects leaves the message read', async () => {
@@ -167,4 +187,62 @@ test('netflow9: the padding that ends a template flowset is not read as a record
     const packet = await decodeWithin('netflow9: the padding that ends a template flowset is not read as a record');
 
     assert.deepStrictEqual(packet, { ...empty, records: 1, templates: [264] });
+});
+
+test('ipfix: a set running past the end of the message keeps the records decoded before it', async () => {
+    const packet = await decodeWithin('ipfix: a set running past the end of the message keeps the records decoded before it');
+
+    assert.deepStrictEqual(packet, {
+        ...empty,
+        records: 2,
+        templates: [270],
+        skipped: [{ setId: 2, reason: SKIP_REASONS.TRUNCATED_SET }, { setId: 2, reason: SKIP_REASONS.RECORD_PAST_SET }],
+    });
+});
+
+test('ipfix: a data set running past the end of the message keeps its whole records', async () => {
+    const packet = await decodeWithin('ipfix: a data set running past the end of the message keeps its whole records');
+
+    assert.deepStrictEqual(packet, { ...empty, records: 2, templates: [270], skipped: [{ setId: 270, reason: SKIP_REASONS.TRUNCATED_SET }] });
+});
+
+test('ipfix: an options template record shorter than its header ends the set', async () => {
+    const packet = await decodeWithin('ipfix: an options template record shorter than its header ends the set');
+
+    assert.deepStrictEqual(packet, { ...empty, records: 2, templates: [271], skipped: [{ setId: 3, reason: SKIP_REASONS.RECORD_PAST_SET }] });
+});
+
+test('ipfix: a variable-length value of 0 bytes is read, one cut short ends the set', async () => {
+    const records = await decodeWithin('ipfix: a variable-length value of 0 bytes is read, one cut short ends the set');
+
+    assert.deepStrictEqual(records, [{ sizeInBytes: 1 + 0 + 4, nameBytes: 0, octets: '1500' }]);
+});
+
+for (const scenario of [
+    'ipfix: a provided template of unreadable field lengths is reported as malformed',
+    'netflow9: a provided template without a record size is reported as malformed',
+]) {
+    test(scenario, async () => {
+        const packet = await decodeWithin(scenario);
+
+        assert.deepStrictEqual(packet, { ...empty, skipped: [{ setId: 256, templateId: 256, reason: SKIP_REASONS.MALFORMED_TEMPLATE }] });
+    });
+}
+
+test('netflow9: a flowset running past the end of the message keeps the records decoded before it', async () => {
+    const packet = await decodeWithin('netflow9: a flowset running past the end of the message keeps the records decoded before it');
+
+    assert.deepStrictEqual(packet, {
+        ...empty,
+        records: 2,
+        templates: [272],
+        skipped: [{ setId: 0, reason: SKIP_REASONS.TRUNCATED_SET }, { setId: 0, reason: SKIP_REASONS.RECORD_PAST_SET }],
+    });
+});
+
+// NetFlow v9 has no variable-length field: a record is read only when its whole size fits, which 65535 bytes never do
+test('netflow9: a field of 65535 bytes is not read as a variable-length field', async () => {
+    const packet = await decodeWithin('netflow9: a field of 65535 bytes is not read as a variable-length field');
+
+    assert.deepStrictEqual(packet, { ...empty, templates: [273] });
 });

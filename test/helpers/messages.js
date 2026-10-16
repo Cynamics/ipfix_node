@@ -20,18 +20,21 @@ const ipfixOptionsTemplateRecord = (templateId, scope, list) => Buffer.concat([
     u16(templateId), u16(scope.length + list.length), u16(scope.length), fields([...scope, ...list]),
 ]);
 
-const ipfixMessage = sets => {
+// The observation domain scopes the templates (RFC 7011 Observation Domain ID, RFC 3954 Source ID)
+const ipfixMessage = (sets, observationDomainId = 0) => {
     const body = Buffer.concat(sets);
     const header = Buffer.alloc(16);
     header.writeUInt16BE(10, 0);
     header.writeUInt16BE(header.length + body.length, 2);
+    header.writeUInt32BE(observationDomainId, 12);
     return Buffer.concat([header, body]);
 };
 
-const netflow9Message = sets => {
+const netflow9Message = (sets, sourceId = 0) => {
     const header = Buffer.alloc(20);
     header.writeUInt16BE(9, 0);
     header.writeUInt16BE(sets.length, 2);
+    header.writeUInt32BE(sourceId, 16);
     return Buffer.concat([header, ...sets]);
 };
 

@@ -25,4 +25,9 @@ module.exports = (scenario, milliseconds = 3000) => new Promise((resolve, reject
         clearTimeout(timer);
         reject(error);
     });
+    // After a result or an error the promise is settled and this does nothing; otherwise the worker died quietly
+    worker.once('exit', code => {
+        clearTimeout(timer);
+        reject(new Error(`the worker exited with code ${code} before it posted a result`));
+    });
 });
