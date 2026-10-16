@@ -420,7 +420,13 @@ test('ipfix: a templateProvider that throws leaves its data set unread and the m
 test('ipfix: the bytes after the message length are not read as sets', async () => {
     const packet = await decodeWithin('ipfix: the bytes after the message length are not read as sets');
 
-    assert.deepStrictEqual(packet, { ...empty, records: 2, templates: [256], skipped: [{ reason: SKIP_REASONS.MESSAGE_LENGTH }] });
+    assert.deepStrictEqual(packet, {
+        ...empty,
+        records: 2,
+        templates: [256],
+        // The first message: header, template set, data set of 2 records; then the second: header, data set of 3 records
+        skipped: [{ reason: SKIP_REASONS.MESSAGE_LENGTH, messageLength: 16 + 20 + 28, bytes: 16 + 20 + 28 + 16 + 40 }],
+    });
 });
 
 test('ipfix: an options template withdrawal of a template is ignored with external storage', async () => {
@@ -461,9 +467,62 @@ test('a message too short for its version is rejected, not thrown', async () => 
     assert.strictEqual(await decodeWithin('a message too short for its version is rejected, not thrown'), 'rejected: RangeError');
 });
 
-// DataSetRecord reads the fields by position: a provider may hold them as an object, as 1.2.9 read them
-test('netflow9: a provided template whose fields are held by position is read', async () => {
-    const packet = await decodeWithin('netflow9: a provided template whose fields are held by position is read');
+// DataSetRecord reads the fields by position: a provider may hold them as an object, as 1.2.9 read them for NetFlow v9
+for (const scenario of [
+    'netflow9: a provided template whose fields are held by position is read',
+    'ipfix: a provided template whose fields are held by position is read',
+]) {
+    test(scenario, async () => {
+        const packet = await decodeWithin(scenario);
 
-    assert.deepStrictEqual(packet, { ...empty, records: 2 });
+        assert.deepStrictEqual(packet, { ...empty, records: 2 });
+    });
+}
+
+// flow-shipper stores a new template only after its Mongo write: the next datagrams of the exporter come before that
+test('ipfix: with external storage, a template or withdrawal applies to later messages until its callback settles', async () => {
+    const result = await decodeWithin('ipfix: with external storage, a template or withdrawal applies to later messages until its callback settles');
+
+    assert.deepStrictEqual(result.storing, { ...empty, records: 2 });
+    assert.deepStrictEqual(result.stored, { ...empty, records: 2 });
+    assert.deepStrictEqual(result.removing, { ...empty, skipped: [skipped(256, 256, SKIP_REASONS.UNKNOWN_TEMPLATE)] });
+    assert.deepStrictEqual(result.removed, { ...empty, skipped: [skipped(256, 256, SKIP_REASONS.UNKNOWN_TEMPLATE)] });
+});
+
+test('ipfix: with external storage, a withdrawal of all options templates applies to later messages until its callback settles', async () => {
+    const packet = await decodeWithin('ipfix: with external storage, a withdrawal of all options templates applies to later messages until its callback settles');
+
+    assert.deepStrictEqual(packet, { ...empty, records: 1, skipped: [skipped(300, 300, SKIP_REASONS.UNKNOWN_TEMPLATE)] });
+});
+
+// As deserialize does, endSession falls back to the session of the options
+test('ipfix: endSession without a session ends the session of the options', async () => {
+    const { own, other, ended } = await decodeWithin('ipfix: endSession without a session ends the session of the options');
+
+    assert.deepStrictEqual(own, { ...empty, skipped: [skipped(256, 256, SKIP_REASONS.UNKNOWN_TEMPLATE)] });
+    assert.deepStrictEqual(other, { ...empty, records: 2 });
+    assert.deepStrictEqual(ended, { ...empty, skipped: [skipped(257, 257, SKIP_REASONS.UNKNOWN_TEMPLATE)] });
+});
+
+test('external storage without both callbacks is refused when the deserializer is created', async () => {
+    const result = await decodeWithin('external storage without both callbacks is refused when the deserializer is created');
+
+    assert.match(result.noStore, /onNewTemplate/);
+    assert.match(result.noProvider, /templateProvider/);
+    assert.strictEqual(result.both, 'created');
+    assert.strictEqual(result.internal, 'created');
+});
+
+test('ipfix: a message length past its bytes or inside its header is listed with both lengths', async () => {
+    const { bytes, longer, inside } = await decodeWithin('ipfix: a message length past its bytes or inside its header is listed with both lengths');
+
+    const listed = messageLength => ({ ...empty, records: 2, templates: [256], skipped: [{ reason: SKIP_REASONS.MESSAGE_LENGTH, messageLength, bytes }] });
+    assert.deepStrictEqual(longer, listed(bytes + 10));
+    assert.deepStrictEqual(inside, listed(8));
+});
+
+test('ipfix: a 3-byte length prefix cut short ends the set', async () => {
+    const packet = await decodeWithin('ipfix: a 3-byte length prefix cut short ends the set');
+
+    assert.deepStrictEqual(packet, { ...empty, templates: [403], skipped: [skipped(403, 403, SKIP_REASONS.RECORD_PAST_SET)] });
 });

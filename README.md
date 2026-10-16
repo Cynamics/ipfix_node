@@ -26,7 +26,7 @@ IpfixDeserializer.deserialize(data)
 
 An optional second parameter names the transport session the message arrived on, such as the exporter's address and port: `deserialize(data, rinfo.address + ":" + rinfo.port)`. The internal storage keeps each session's templates apart, as [RFC 7011 section 3.4.1](https://tools.ietf.org/html/rfc7011#section-3.4.1) scopes template ids to the transport session and observation domain. The <b>session</b> option gives the session of every message a deserializer reads, when the call gives none.
 
-When a TCP connection or an SCTP association ends, call `deserializer.endSession(session)`: it removes the session's templates from the internal storage, as the end of a session withdraws them ([RFC 7011 section 8.1](https://tools.ietf.org/html/rfc7011#section-8.1)), and keeps the storage from growing with every closed session. `endSession()` with no session removes the templates of the messages given none.
+When a TCP connection or an SCTP association ends, call `deserializer.endSession(session)`: it removes the session's templates from the internal storage, as the end of a session withdraws them ([RFC 7011 section 8.1](https://tools.ietf.org/html/rfc7011#section-8.1)), and keeps the storage from growing with every closed session. `endSession()` with no session ends the session of the <b>session</b> option, as `deserialize` falls back to it, or else that of the messages given none.
 
 The library is using internal Maps for storing [Template Records](https://tools.ietf.org/html/rfc7011#section-3.4.1) and [Option Template Records](https://tools.ietf.org/html/rfc7011#section-3.4.2). Take a look at the options below to disable the internal storage so you can use your own storing mechanism. 
 
@@ -37,7 +37,7 @@ Options
 Should the library not use the default internal storage strategy then set this to <b>false</b>.
 Default: <b>true</b>.
 
-When setting this field to <b>false</b> you must provide a <b>function</b> via [templateProvider](#templateProvider) option.
+When setting this field to <b>false</b> you must provide a <b>function</b> via the [templateProvider](#templateProvider) and [onNewTemplate](#onNewTemplate) options: the deserializer throws when it is created without them.
 
 If you dont want to switch to your own storage strategy then you can access the internal storage at any time by using the Storage property.
 
@@ -60,7 +60,7 @@ Function arguments: <b>templateId</b> (the id of the template which is needed by
 
 The callback is called with the deserialized packet as `this`, as [onNewTemplate](#onNewTemplate) and [onTemplateWithdrawal](#onTemplateWithdrawal) are: `this.Header.Version` (9 or 10) and `this.Header.ObservationDomainId` (IPFIX) or `this.Header.SourceId` (NetFlow v9) tell which domain's template to return. A data set whose template it does not return (`undefined` or `null`) is listed in [SkippedSets](#withdrawn-templates-and-skipped-sets); one for which it throws is listed with the error, and the rest of the message is read.
 
-A template the message defines, or withdraws, applies to the message's later data sets even before [onNewTemplate](#onNewTemplate) or [onTemplateWithdrawal](#onTemplateWithdrawal) has stored or removed it, as RFC 7011 section 8.1 orders them: the provider is asked for the other templates only.
+A template a message defines, or withdraws, applies to that message's later data sets and to the deserializer's next messages as soon as it is read, as RFC 7011 section 8.1 orders them: until [onNewTemplate](#onNewTemplate) or [onTemplateWithdrawal](#onTemplateWithdrawal) has settled, the deserializer keeps it pending and asks the provider for the other templates only. An asynchronous callback, such as one writing to a database, loses no data sent meanwhile.
 
 #### onNewTemplate
 
@@ -141,7 +141,7 @@ The deserialized packet lists what it did not decode, so the caller can report i
   - "withdrawal received over UDP": a template withdrawal while [transport](#transport) is "udp"; it is ignored.
   - "withdrawal of a template not stored": a withdrawal of a template the deserializer does not have, or the `templateProvider` does not return, as a template of the withdrawal's kind; it is ignored.
   - "templateProvider failed": the `templateProvider` threw for a data set's or a withdrawal's template; the set or withdrawal is not read.
-  - "message length other than its bytes": an IPFIX header's Length is not the number of bytes given; the sets up to the Length are read (all of the bytes when the Length is past them or inside the header).
+  - "message length other than its bytes": an IPFIX header's Length is not the number of bytes given; the sets up to the Length are read (all of the bytes when the Length is past them or inside the header). The entry has no set id, and gives `messageLength` and `bytes`.
 
   A set may end with zero padding shorter than its shortest record ([RFC 7011 section 3.3.1](https://tools.ietf.org/html/rfc7011#section-3.3.1)): it is not a record, and not listed.
 
@@ -150,7 +150,7 @@ The deserialized packet lists what it did not decode, so the caller can report i
 - The internal storage's maps are keyed `[<session>/]<version>/<domainId>/<templateId>` (a string), no longer by the template id.
 - Template withdrawals are ignored unless [transport](#transport) is "tcp" or "sctp".
 - `templateProvider` is called with the packet as `this`, and an error it throws no longer rejects the message.
-- An unknown `transport` throws when the deserializer is created.
+- An unknown `transport`, or <b>useInternalStorage:false</b> without `onNewTemplate` and `templateProvider`, throws when the deserializer is created.
 - An IPFIX message is read up to its header's Length, not to the end of the buffer.
 - An error in `onNewTemplate` no longer rejects the message: it is noted on the template.
 - The deserializer no longer logs a missing template, a record cut short or an unreadable data set: each is listed in <b>SkippedSets</b>.

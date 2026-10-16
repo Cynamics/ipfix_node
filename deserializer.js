@@ -34,6 +34,17 @@ var Deserializer = function (params)
     if (TRANSPORTS.indexOf(this.conf.transport) < 0)
         throw new Error(`Unsupported transport '${params.transport}': use 'udp', 'tcp' or 'sctp'`);
 
+    // Without the internal storage the caller keeps the templates: checked once here, not on every message
+    if (!this.conf.useInternalStorage && typeof this.conf.onNewTemplate !== 'function')
+        throw new Error('With useInternalStorage:false, give an onNewTemplate function to store the new templates');
+
+    if (!this.conf.useInternalStorage && typeof this.conf.templateProvider !== 'function')
+        throw new Error('With useInternalStorage:false, give a templateProvider function to return the stored templates');
+
+    // With the caller's own storage, the templates and withdrawals whose callback has not settled: the next messages
+    // read them before the templateProvider, which may not have caught up yet
+    var pending = new Map();
+
     // session (optional): the transport session the message arrived on, such as the exporter's address and port. The
     // internal storage keeps the templates of each session apart, as RFC 7011 scopes them.
     this.deserialize = function (buffer, session)
@@ -124,7 +135,7 @@ var Deserializer = function (params)
     var prepareParams = function (session)
     {
         var params = {};
-        params = Object.assign(params, self.conf, { session: session !== undefined ? session : self.conf.session });
+        params = Object.assign(params, self.conf, { session: session !== undefined ? session : self.conf.session, pending: pending });
         // The internal storage is used whenever it is on, a templateProvider given or not, as the packets read it then
         if (self.conf.useInternalStorage)
             params = Object.assign(params, { templates: self.Storage });
@@ -132,18 +143,12 @@ var Deserializer = function (params)
         return params;
     }
     // Removes every template of a transport session from the internal storage: call it when a TCP connection or an SCTP
-    // association ends, as that withdraws all of its templates (RFC 7011 section 8.1)
+    // association ends, as that withdraws all of its templates (RFC 7011 section 8.1). Without a session, that of the
+    // options, as for deserialize.
     this.endSession = function (session)
     {
-        TemplateStore.endSession(self.Storage, session);
+        TemplateStore.endSession(self.Storage, session !== undefined ? session : self.conf.session);
     };
-    var getStorageByType = function (type)
-    {
-        if (type == 'DataTemplate')
-            return Storage.DataTemplateMap;
-        else if (type == 'OptionsTemplate')
-            return Storage.OptionsTemplateMap;
-    }
     return this;
 }
 

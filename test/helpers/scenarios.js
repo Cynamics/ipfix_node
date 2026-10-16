@@ -46,6 +46,29 @@ const TCP = { transport: 'tcp' };
 
 const fieldIds = flow => flow.Fields.map(field => field.fieldId);
 
+// A provider's template whose fields are held as an object by position, as a document store may keep them
+const byPositionProvider = () => ({
+    useInternalStorage: false,
+    onNewTemplate: () => {},
+    templateProvider: templateId => ({
+        templateId,
+        numberFields: 3,
+        dataRecordSizeInBytes: 12,
+        FieldSpecifiers: { 0: { fieldId: 8, fieldLength: 4 }, 1: { fieldId: 12, fieldLength: 4 }, 2: { fieldId: 1, fieldLength: 4 } },
+    }),
+});
+
+// Callbacks that store and remove only after an await, as flow-shipper does after its Mongo write
+const delayedStorage = (more = {}, milliseconds = 20) => {
+    const { options, calls } = externalStorage(more);
+    const later = action => new Promise(resolve => setTimeout(() => resolve(action()), milliseconds));
+    const store = options.onNewTemplate;
+    const remove = options.onTemplateWithdrawal;
+    options.onNewTemplate = template => later(() => store(template));
+    options.onTemplateWithdrawal = (templateId, templateType) => later(() => remove(templateId, templateType));
+    return { options, calls };
+};
+
 const scenarios = {
     'ipfix: templates of one id in two observation domains are kept apart': async () => {
         const decoder = Netflow();
@@ -469,14 +492,86 @@ const scenarios = {
             return `threw: ${error.name}`;
         }
     },
-    'netflow9: a provided template whose fields are held by position is read': async () => {
-        const FieldSpecifiers = { 0: { fieldId: 8, fieldLength: 4 }, 1: { fieldId: 12, fieldLength: 4 }, 2: { fieldId: 1, fieldLength: 4 } };
-        return summary(await Netflow({
-            useInternalStorage: false,
-            onNewTemplate: () => {},
-            templateProvider: templateId => ({ templateId, numberFields: 3, dataRecordSizeInBytes: 12, FieldSpecifiers }),
-        }).deserialize(netflow9Message([set(256, flowRecords(2))])));
+    'netflow9: a provided template whose fields are held by position is read': async () => summary(
+        await Netflow(byPositionProvider()).deserialize(netflow9Message([set(256, flowRecords(2))]))
+    ),
+    'ipfix: a provided template whose fields are held by position is read': async () => summary(
+        await Netflow(byPositionProvider()).deserialize(ipfixMessage([set(256, flowRecords(2))]))
+    ),
+    'ipfix: with external storage, a template or withdrawal applies to later messages until its callback settles': async () => {
+        const { options } = delayedStorage(TCP);
+        const decoder = Netflow(options);
+        const defined = await decoder.deserialize(ipfixMessage([set(2, templateRecord(256, FLOW_FIELDS))]));
+        const storing = await decoder.deserialize(ipfixMessage([set(256, flowRecords(2))]));
+        await Promise.all(defined.TemplateSets.map(template => template.settled));
+        const stored = await decoder.deserialize(ipfixMessage([set(256, flowRecords(2))]));
+        const withdrawing = await decoder.deserialize(ipfixMessage([set(2, withdrawal(256))]));
+        const removing = await decoder.deserialize(ipfixMessage([set(256, flowRecords(2))]));
+        await Promise.all(withdrawing.TemplateWithdrawals.map(withdrawn => withdrawn.settled));
+        const removed = await decoder.deserialize(ipfixMessage([set(256, flowRecords(2))]));
+        return { storing: summary(storing), stored: summary(stored), removing: summary(removing), removed: summary(removed) };
     },
+    'ipfix: with external storage, a withdrawal of all options templates applies to later messages until its callback settles': async () => {
+        const { options } = externalStorage(TCP);
+        // A callback that is still running when the next message arrives
+        options.onTemplateWithdrawal = () => new Promise(resolve => setTimeout(resolve, 20));
+        const decoder = Netflow(options);
+        const optionsRecord = Buffer.alloc(8);
+        optionsRecord.writeUInt32BE(7, 0);
+        optionsRecord.writeUInt32BE(100, 4);
+        await decoder.deserialize(ipfixMessage([
+            set(3, ipfixOptionsTemplateRecord(300, [[149, 4]], [[34, 4]])), set(2, templateRecord(301, FLOW_FIELDS)),
+        ]));
+        await decoder.deserialize(ipfixMessage([set(3, withdrawal(3))]));
+        return summary(await decoder.deserialize(ipfixMessage([set(300, optionsRecord), set(301, flowRecords(1))])));
+    },
+    'ipfix: endSession without a session ends the session of the options': async () => {
+        const scoped = Netflow({ session: 'exporter-1' });
+        const unscoped = Netflow();
+        await scoped.deserialize(ipfixMessage([set(2, templateRecord(256, FLOW_FIELDS))]));
+        await unscoped.deserialize(ipfixMessage([set(2, templateRecord(257, FLOW_FIELDS))]));
+        scoped.endSession();
+        const own = await scoped.deserialize(ipfixMessage([set(256, flowRecords(2))]));
+        const other = await unscoped.deserialize(ipfixMessage([set(257, flowRecords(2))]));
+        unscoped.endSession();
+        const ended = await unscoped.deserialize(ipfixMessage([set(257, flowRecords(2))]));
+        return { own: summary(own), other: summary(other), ended: summary(ended) };
+    },
+    'external storage without both callbacks is refused when the deserializer is created': async () => {
+        const attempt = options => {
+            try {
+                Netflow(options);
+                return 'created';
+            } catch (error) {
+                return error.message;
+            }
+        };
+        return {
+            noStore: attempt({ useInternalStorage: false, templateProvider: () => undefined }),
+            noProvider: attempt({ useInternalStorage: false, onNewTemplate: () => {} }),
+            both: attempt({ useInternalStorage: false, onNewTemplate: () => {}, templateProvider: () => undefined }),
+            internal: attempt({}),
+        };
+    },
+    'ipfix: a message length past its bytes or inside its header is listed with both lengths': async () => {
+        const message = ipfixMessage([set(2, templateRecord(256, FLOW_FIELDS)), set(256, flowRecords(2))]);
+        const withLength = length => {
+            const copy = Buffer.from(message);
+            copy.writeUInt16BE(length, 2);
+            return copy;
+        };
+        return {
+            bytes: message.length,
+            longer: summary(await Netflow().deserialize(withLength(message.length + 10))),
+            inside: summary(await Netflow().deserialize(withLength(8))),
+        };
+    },
+    'ipfix: a 3-byte length prefix cut short ends the set': async () => summary(
+        await Netflow().deserialize(ipfixMessage([
+            set(2, templateRecord(403, [[82, 0xffff]])),
+            set(403, Buffer.from([255, 0x01])), // 255 announces a 2-byte length: only 1 byte of it is there
+        ]))
+    ),
 };
 
 module.exports = scenarios;
