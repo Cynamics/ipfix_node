@@ -15,7 +15,8 @@ var Deserializer = function (params)
         parseDataValues: true,
         templateProvider: undefined,
         onNewTemplate: undefined,
-        // Called with (templateId, templateType) when an IPFIX exporter withdraws a template, without internal storage
+        // Called with (templateId, templateType) when an IPFIX exporter withdraws a template, without internal storage; a
+        // template id of 2 or 3 withdraws all templates of the kind
         onTemplateWithdrawal: undefined,
         useInternalStorage: true,
     }
@@ -107,7 +108,8 @@ var Deserializer = function (params)
     {
         var params = {};
         params = Object.assign(params, self.conf);
-        if (typeof self.conf.templateProvider == 'undefined')
+        // The internal storage is used whenever it is on, a templateProvider given or not, as the packets read it then
+        if (self.conf.useInternalStorage)
             params = Object.assign(params, { templates: self.Storage });
 
         return params;

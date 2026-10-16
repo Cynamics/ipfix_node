@@ -9,8 +9,8 @@ const summary = packet => ({
     records: packet.DataSets.length,
     templates: packet.TemplateSets.map(template => template.templateId),
     optionsTemplates: packet.OptionsTemplateSets.map(template => template.templateId),
-    withdrawals: packet.TemplateWithdrawals || [],
-    skipped: packet.SkippedSets || [],
+    withdrawals: packet.TemplateWithdrawals,
+    skipped: packet.SkippedSets,
 });
 
 // The way a caller keeps templates outside the decoder, as flow-shipper does: the callbacks fill a map the
@@ -41,12 +41,64 @@ const emptyRecordProvider = fieldSpecifiers => ({
 });
 
 const scenarios = {
-    'ipfix: a withdrawn template is removed from the internal storage': async () => {
+    'ipfix: a withdrawal is reported, and the internal storage, shared by every exporter, keeps the template': async () => {
         const decoder = Netflow();
         const before = await decoder.deserialize(ipfixMessage([set(2, templateRecord(256, FLOW_FIELDS)), set(256, flowRecords(2))]));
         const withdrawn = await decoder.deserialize(ipfixMessage([set(2, withdrawal(256))]));
         const after = await decoder.deserialize(ipfixMessage([set(256, flowRecords(2))]));
         return { before: summary(before), withdrawn: summary(withdrawn), after: summary(after) };
+    },
+    'ipfix: a withdrawal of all templates is passed on with the set id': async () => {
+        const { options, calls } = externalStorage();
+        const packet = await Netflow(options).deserialize(ipfixMessage([set(2, withdrawal(2)), set(3, withdrawal(3))]));
+        return { calls, packet: summary(packet) };
+    },
+    'ipfix: a record of no field and a reserved id other than the set id is ignored': async () => summary(
+        await Netflow().deserialize(ipfixMessage([set(2, withdrawal(100)), set(3, withdrawal(4))]))
+    ),
+    'ipfix: a withdrawal callback that throws or rejects leaves the message read': async () => {
+        const { options } = externalStorage();
+        options.onTemplateWithdrawal = templateId => {
+            if (templateId === 256) {
+                throw new Error('storage down');
+            }
+
+            return Promise.reject(new Error('storage down'));
+        };
+        const decoder = Netflow(options);
+        const packet = await decoder.deserialize(ipfixMessage([
+            set(2, templateRecord(258, FLOW_FIELDS)), set(2, Buffer.concat([withdrawal(256), withdrawal(257)])), set(258, flowRecords(2)),
+        ]));
+        await new Promise(resolve => setImmediate(resolve)); // the rejection is noted once it settles
+        return summary(packet);
+    },
+    'ipfix: the internal storage is used when a templateProvider is also given': async () => summary(
+        await Netflow({ templateProvider: () => undefined }).deserialize(ipfixMessage([
+            set(2, templateRecord(265, FLOW_FIELDS)), set(265, flowRecords(2)), set(2, withdrawal(265)),
+        ]))
+    ),
+    'ipfix: records of a variable-length field are framed by their own length prefix': async () => {
+        // An interface name of variable length (IE 82), then octets
+        const record = name => {
+            const value = Buffer.from(name);
+            const prefix = value.length < 255 ? Buffer.from([value.length]) : Buffer.from([255, value.length >> 8, value.length & 0xff]);
+            return Buffer.concat([prefix, value, Buffer.from([0, 0, 5, 220])]);
+        };
+        const packet = await Netflow().deserialize(ipfixMessage([
+            set(2, templateRecord(400, [[82, 0xffff], [1, 4]])),
+            set(400, Buffer.concat([record('eth0'), record('ge-0/0/12'), record('x'.repeat(300))])),
+        ]));
+        return packet.DataSets.map(flow => ({
+            sizeInBytes: flow.sizeInBytes, nameBytes: flow.Fields[0].sizeInBytes, octets: flow.Fields[1].fieldValueParsed,
+        }));
+    },
+    'ipfix: a templateProvider returning null leaves its data set unread and the message read': async () => {
+        const { options } = externalStorage();
+        const provide = options.templateProvider;
+        options.templateProvider = templateId => (templateId === 256 ? null : provide(templateId));
+        return summary(await Netflow(options).deserialize(ipfixMessage([
+            set(256, flowRecords(2)), set(2, templateRecord(257, FLOW_FIELDS)), set(257, flowRecords(3)),
+        ])));
     },
     'ipfix: a withdrawal reaches onTemplateWithdrawal, never onNewTemplate': async () => {
         const { options, calls } = externalStorage();
@@ -89,6 +141,14 @@ const scenarios = {
     'ipfix: padding shorter than a record ends a template set': async () => summary(
         await Netflow().deserialize(ipfixMessage([set(2, templateRecord(261, FLOW_FIELDS), 2), set(261, flowRecords(1))]))
     ),
+    'netflow9: a templateProvider returning null leaves its flowset unread and the message read': async () => {
+        const { options } = externalStorage();
+        const provide = options.templateProvider;
+        options.templateProvider = templateId => (templateId === 256 ? null : provide(templateId));
+        return summary(await Netflow(options).deserialize(netflow9Message([
+            set(256, flowRecords(2)), set(0, templateRecord(257, FLOW_FIELDS)), set(257, flowRecords(3)),
+        ])));
+    },
     'netflow9: a template of no fields is not stored': async () => {
         const { options, calls } = externalStorage();
         const packet = await Netflow(options).deserialize(netflow9Message([set(0, templateRecord(256, [])), set(256, flowRecords(2))]));

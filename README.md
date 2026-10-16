@@ -37,6 +37,8 @@ When setting this field to <b>false</b> you must provide a <b>function</b> via [
 
 If you dont want to switch to your own storage strategy then you can access the internal storage at any time by using the Storage property.
 
+The internal storage is one per process, shared by every exporter and every deserializer, and keyed by template id only. With several exporters, keep templates per exporter with <b>useInternalStorage:false</b>, [templateProvider](#templateProvider) and [onNewTemplate](#onNewTemplate).
+
 ```javascript
 var IpfixDeserializer = require('ipfix_node')();
 var storage = IpfixDeserializer.Storage;
@@ -93,7 +95,11 @@ A template withdrawal (a template record with a field count of 0, [RFC 7011 sect
 
 #### onTemplateWithdrawal
 
-Callback function which gets called when an IPFIX exporter withdraws a Template or an Options Template. With <b>useInternalStorage:false</b>, remove the template you stored for this id, so the following Data Records of that id are not read with it. With the internal storage the deserializer removes it itself.
+Callback function which gets called, with <b>useInternalStorage:false</b>, when an IPFIX exporter withdraws a Template or an Options Template ([RFC 7011 section 8.1](https://tools.ietf.org/html/rfc7011#section-8.1)): remove the template you stored for this exporter and id. A <b>templateId</b> of 2 ("DataTemplate") or 3 ("OptionsTemplate") withdraws all templates of the kind.
+
+The internal storage keeps its templates on a withdrawal: it is shared by every exporter, and an exporter announces a template again before it sends data of its id.
+
+An error the callback throws, or a promise it returns that rejects, is noted as <b>error</b> on the withdrawal in <b>TemplateWithdrawals</b> (a rejection once it settles); the message is still read.
 
 Function arguments: <b>templateId</b>, <b>templateType</b> ("DataTemplate" or "OptionsTemplate")
 
@@ -101,7 +107,7 @@ Function arguments: <b>templateId</b>, <b>templateType</b> ("DataTemplate" or "O
 
 The deserialized packet lists what it did not decode, so the caller can report it (the deserializer does not log it):
 
-- <b>TemplateWithdrawals</b> (IPFIX): `{ templateId, templateType }` for each template the message withdrew.
+- <b>TemplateWithdrawals</b>: `{ templateId, templateType }` for each template the message withdrew, with `error` when [onTemplateWithdrawal](#onTemplateWithdrawal) failed. Always empty for NetFlow v9, which has no withdrawal.
 - <b>SkippedSets</b>: `{ setId, templateId, reason }` for each set or template left undecoded:
   - "set shorter than its header": a set length below 4 bytes, or fewer than 4 bytes left; the rest of the message is not read.
   - "unknown set id": a set that is not a template, an options template nor a data set; it is stepped over whole.

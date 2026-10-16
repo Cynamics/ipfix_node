@@ -7,7 +7,6 @@ module.exports = (scenario, milliseconds = 3000) => new Promise((resolve, reject
     const worker = new Worker(path.join(__dirname, 'run_scenario.js'), {
         workerData: scenario,
         resourceLimits: { maxOldGenerationSizeMb: 128 },
-        stderr: true,
     });
     const timer = setTimeout(() => {
         worker.terminate();

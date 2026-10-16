@@ -10,13 +10,71 @@ const SKIP_REASONS = require('../lib/packet_elements/skip_reasons');
 const empty = { records: 0, templates: [], optionsTemplates: [], withdrawals: [], skipped: [] };
 const withdrawn = (templateId, templateType) => ({ templateId, templateType });
 
-test('ipfix: a withdrawn template is removed from the internal storage', async () => {
-    const result = await decodeWithin('ipfix: a withdrawn template is removed from the internal storage');
+// The internal storage is one per process: removing the template would stop another exporter's data of that id, and an
+// exporter announces a template again before it sends data of its id
+test('ipfix: a withdrawal is reported, and the internal storage, shared by every exporter, keeps the template', async () => {
+    const result = await decodeWithin('ipfix: a withdrawal is reported, and the internal storage, shared by every exporter, keeps the template');
 
     assert.deepStrictEqual(result.before, { ...empty, records: 2, templates: [256] });
     assert.deepStrictEqual(result.withdrawn, { ...empty, withdrawals: [withdrawn(256, 'DataTemplate')] });
-    assert.deepStrictEqual(result.after, empty);
+    assert.deepStrictEqual(result.after, { ...empty, records: 2 });
 });
+
+// RFC 7011 section 8.1: a template id of 2 in a template set (3 in an options template set) withdraws all of them
+test('ipfix: a withdrawal of all templates is passed on with the set id', async () => {
+    const { calls, packet } = await decodeWithin('ipfix: a withdrawal of all templates is passed on with the set id');
+
+    const all = [withdrawn(2, 'DataTemplate'), withdrawn(3, 'OptionsTemplate')];
+    assert.deepStrictEqual(calls.withdrawn, all);
+    assert.deepStrictEqual(packet, { ...empty, withdrawals: all });
+});
+
+test('ipfix: a record of no field and a reserved id other than the set id is ignored', async () => {
+    const packet = await decodeWithin('ipfix: a record of no field and a reserved id other than the set id is ignored');
+
+    assert.deepStrictEqual(packet, empty);
+});
+
+test('ipfix: a withdrawal callback that throws or rejects leaves the message read', async () => {
+    const packet = await decodeWithin('ipfix: a withdrawal callback that throws or rejects leaves the message read');
+
+    assert.deepStrictEqual(packet, {
+        ...empty,
+        records: 2,
+        templates: [258],
+        withdrawals: [
+            { ...withdrawn(256, 'DataTemplate'), error: 'storage down' },
+            { ...withdrawn(257, 'DataTemplate'), error: 'storage down' },
+        ],
+    });
+});
+
+test('ipfix: the internal storage is used when a templateProvider is also given', async () => {
+    const packet = await decodeWithin('ipfix: the internal storage is used when a templateProvider is also given');
+
+    assert.deepStrictEqual(packet, { ...empty, records: 2, templates: [265], withdrawals: [withdrawn(265, 'DataTemplate')] });
+});
+
+test('ipfix: records of a variable-length field are framed by their own length prefix', async () => {
+    const records = await decodeWithin('ipfix: records of a variable-length field are framed by their own length prefix');
+
+    assert.deepStrictEqual(records, [
+        { sizeInBytes: 1 + 4 + 4, nameBytes: 4, octets: '1500' },
+        { sizeInBytes: 1 + 9 + 4, nameBytes: 9, octets: '1500' },
+        { sizeInBytes: 3 + 300 + 4, nameBytes: 300, octets: '1500' },
+    ]);
+});
+
+for (const scenario of [
+    'ipfix: a templateProvider returning null leaves its data set unread and the message read',
+    'netflow9: a templateProvider returning null leaves its flowset unread and the message read',
+]) {
+    test(scenario, async () => {
+        const packet = await decodeWithin(scenario);
+
+        assert.deepStrictEqual(packet, { ...empty, records: 3, templates: [257] });
+    });
+}
 
 test('ipfix: a withdrawal reaches onTemplateWithdrawal, never onNewTemplate', async () => {
     const { calls, packet } = await decodeWithin('ipfix: a withdrawal reaches onTemplateWithdrawal, never onNewTemplate');

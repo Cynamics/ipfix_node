@@ -46,5 +46,5 @@ const flowRecords = count => Buffer.concat(Array.from({ length: count }, (_, ind
 }));
 
 module.exports = {
-    set, templateRecord, withdrawal, ipfixOptionsTemplateRecord, ipfixMessage, netflow9Message, FLOW_FIELDS, flowRecords,
+    fields, set, templateRecord, withdrawal, ipfixOptionsTemplateRecord, ipfixMessage, netflow9Message, FLOW_FIELDS, flowRecords,
 };
