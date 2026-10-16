@@ -49,8 +49,8 @@ var Deserializer = function (params)
     // read them before the templateProvider, which may not have caught up yet
     var pending = new Map();
 
-    // session (optional): the transport session the message arrived on, such as the exporter's address and port. The
-    // internal storage keeps the templates of each session apart, as RFC 7011 scopes them.
+    // session (optional): the transport session the message arrived on, such as the connection over TCP or SCTP, or the
+    // exporter's address over UDP. The internal storage keeps the templates of each session apart, as RFC 7011 scopes them.
     this.deserialize = function (buffer, session)
     {
         if (!Buffer.isBuffer(buffer) || buffer.byteLength < 2)
