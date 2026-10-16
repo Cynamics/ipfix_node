@@ -15,6 +15,8 @@ var Deserializer = function (params)
         parseDataValues: true,
         templateProvider: undefined,
         onNewTemplate: undefined,
+        // Called with (templateId, templateType) when an IPFIX exporter withdraws a template, without internal storage
+        onTemplateWithdrawal: undefined,
         useInternalStorage: true,
     }
     this.Storage = require('./lib/storage/template_storage.js');

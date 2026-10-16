@@ -89,6 +89,24 @@ Function arguments: <b>template</b>, <b>templateType</b>
 
 - <b>templateType</b> (string) can be "DataTemplate" or "OptionsTemplate" so you can  
 
+A template withdrawal (a template record with a field count of 0, [RFC 7011 section 8.1](https://tools.ietf.org/html/rfc7011#section-8.1)) and a template whose records would hold no byte never reach this callback.
+
+#### onTemplateWithdrawal
+
+Callback function which gets called when an IPFIX exporter withdraws a Template or an Options Template. With <b>useInternalStorage:false</b>, remove the template you stored for this id, so the following Data Records of that id are not read with it. With the internal storage the deserializer removes it itself.
+
+Function arguments: <b>templateId</b>, <b>templateType</b> ("DataTemplate" or "OptionsTemplate")
+
+#### Withdrawn templates and skipped sets
+
+The deserialized packet lists what it did not decode, so the caller can report it (the deserializer does not log it):
+
+- <b>TemplateWithdrawals</b> (IPFIX): `{ templateId, templateType }` for each template the message withdrew.
+- <b>SkippedSets</b>: `{ setId, templateId, reason }` for each set or template left undecoded:
+  - "set shorter than its header": a set length below 4 bytes, or fewer than 4 bytes left; the rest of the message is not read.
+  - "unknown set id": a set that is not a template, an options template nor a data set; it is stepped over whole.
+  - "template of zero-byte records": a template of no fields or of zero-length fields is not stored, and a data set of such a template, as a `templateProvider` may still return one, is not read.
+
 #### parseDataValues
 
 Boolean option which tells the deserializer whether it should detect and parse values inside Data Records automatically or it should return raw UINT data instead.
