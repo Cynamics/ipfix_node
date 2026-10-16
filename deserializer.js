@@ -41,6 +41,10 @@ var Deserializer = function (params)
     if (!this.conf.useInternalStorage && typeof this.conf.templateProvider !== 'function')
         throw new Error('With useInternalStorage:false, give a templateProvider function to return the stored templates');
 
+    // Over TCP and SCTP template withdrawals are honored: the caller removes the templates it keeps
+    if (!this.conf.useInternalStorage && this.conf.transport !== 'udp' && typeof this.conf.onTemplateWithdrawal !== 'function')
+        throw new Error(`With useInternalStorage:false over ${this.conf.transport}, give an onTemplateWithdrawal function to remove the withdrawn templates`);
+
     // With the caller's own storage, the templates and withdrawals whose callback has not settled: the next messages
     // read them before the templateProvider, which may not have caught up yet
     var pending = new Map();
@@ -142,12 +146,12 @@ var Deserializer = function (params)
 
         return params;
     }
-    // Removes every template of a transport session from the internal storage: call it when a TCP connection or an SCTP
-    // association ends, as that withdraws all of its templates (RFC 7011 section 8.1). Without a session, that of the
-    // options, as for deserialize.
+    // Removes every template of a transport session from the internal storage, and the session's pending ones: call it
+    // when a TCP connection or an SCTP association ends, as that withdraws all of its templates (RFC 7011 section 8.1).
+    // Without a session, that of the options, as for deserialize.
     this.endSession = function (session)
     {
-        TemplateStore.endSession(self.Storage, session !== undefined ? session : self.conf.session);
+        TemplateStore.endSession(self.Storage, pending, session !== undefined ? session : self.conf.session);
     };
     return this;
 }

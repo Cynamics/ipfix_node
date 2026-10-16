@@ -26,7 +26,7 @@ IpfixDeserializer.deserialize(data)
 
 An optional second parameter names the transport session the message arrived on, such as the exporter's address and port: `deserialize(data, rinfo.address + ":" + rinfo.port)`. The internal storage keeps each session's templates apart, as [RFC 7011 section 3.4.1](https://tools.ietf.org/html/rfc7011#section-3.4.1) scopes template ids to the transport session and observation domain. The <b>session</b> option gives the session of every message a deserializer reads, when the call gives none.
 
-When a TCP connection or an SCTP association ends, call `deserializer.endSession(session)`: it removes the session's templates from the internal storage, as the end of a session withdraws them ([RFC 7011 section 8.1](https://tools.ietf.org/html/rfc7011#section-8.1)), and keeps the storage from growing with every closed session. `endSession()` with no session ends the session of the <b>session</b> option, as `deserialize` falls back to it, or else that of the messages given none.
+When a TCP connection or an SCTP association ends, call `deserializer.endSession(session)`: it removes the session's templates from the internal storage, as the end of a session withdraws them ([RFC 7011 section 8.1](https://tools.ietf.org/html/rfc7011#section-8.1)), and keeps the storage from growing with every closed session. `endSession()` with no session ends the session of the <b>session</b> option, as `deserialize` falls back to it, or else that of the messages given none. With <b>useInternalStorage:false</b> it drops the session's pending templates (see [templateProvider](#templateProvider)); remove the ones you stored yourself.
 
 The library is using internal Maps for storing [Template Records](https://tools.ietf.org/html/rfc7011#section-3.4.1) and [Option Template Records](https://tools.ietf.org/html/rfc7011#section-3.4.2). Take a look at the options below to disable the internal storage so you can use your own storing mechanism. 
 
@@ -37,7 +37,7 @@ Options
 Should the library not use the default internal storage strategy then set this to <b>false</b>.
 Default: <b>true</b>.
 
-When setting this field to <b>false</b> you must provide a <b>function</b> via the [templateProvider](#templateProvider) and [onNewTemplate](#onNewTemplate) options: the deserializer throws when it is created without them.
+When setting this field to <b>false</b> you must provide a <b>function</b> via the [templateProvider](#templateProvider) and [onNewTemplate](#onNewTemplate) options, and via [onTemplateWithdrawal](#onTemplateWithdrawal) when [transport](#transport) is "tcp" or "sctp": the deserializer throws when it is created without them.
 
 If you dont want to switch to your own storage strategy then you can access the internal storage at any time by using the Storage property.
 
@@ -61,6 +61,8 @@ Function arguments: <b>templateId</b> (the id of the template which is needed by
 The callback is called with the deserialized packet as `this`, as [onNewTemplate](#onNewTemplate) and [onTemplateWithdrawal](#onTemplateWithdrawal) are: `this.Header.Version` (9 or 10) and `this.Header.ObservationDomainId` (IPFIX) or `this.Header.SourceId` (NetFlow v9) tell which domain's template to return. A data set whose template it does not return (`undefined` or `null`) is listed in [SkippedSets](#withdrawn-templates-and-skipped-sets); one for which it throws is listed with the error, and the rest of the message is read.
 
 A template a message defines, or withdraws, applies to that message's later data sets and to the deserializer's next messages as soon as it is read, as RFC 7011 section 8.1 orders them: until [onNewTemplate](#onNewTemplate) or [onTemplateWithdrawal](#onTemplateWithdrawal) has settled, the deserializer keeps it pending and asks the provider for the other templates only. An asynchronous callback, such as one writing to a database, loses no data sent meanwhile.
+
+Once the callbacks of a template id have all settled, the deserializer reads your storage again: they must take effect in the order they are called. A slower write of an earlier definition must not land after a later definition or withdrawal of the same id; chain the writes of one id, for instance.
 
 #### onNewTemplate
 

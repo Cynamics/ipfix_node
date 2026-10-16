@@ -572,6 +572,42 @@ const scenarios = {
             set(403, Buffer.from([255, 0x01])), // 255 announces a 2-byte length: only 1 byte of it is there
         ]))
     ),
+    'ipfix: endSession drops the session\'s pending templates': async () => {
+        const { options } = externalStorage(TCP);
+        // A write that never ends: the template stays pending
+        options.onNewTemplate = () => new Promise(() => {});
+        const decoder = Netflow(options);
+        await decoder.deserialize(ipfixMessage([set(2, templateRecord(256, FLOW_FIELDS))]), 'exporter-1');
+        const pending = await decoder.deserialize(ipfixMessage([set(256, flowRecords(2))]), 'exporter-1');
+        decoder.endSession('exporter-1');
+        const ended = await decoder.deserialize(ipfixMessage([set(256, flowRecords(2))]), 'exporter-1');
+        return { pending: summary(pending), ended: summary(ended) };
+    },
+    'external storage over TCP or SCTP without onTemplateWithdrawal is refused when the deserializer is created': async () => {
+        const attempt = transport => {
+            try {
+                Netflow({ transport, useInternalStorage: false, onNewTemplate: () => {}, templateProvider: () => undefined });
+                return 'created';
+            } catch (error) {
+                return error.message;
+            }
+        };
+        return { tcp: attempt('tcp'), sctp: attempt('sctp'), udp: attempt('udp') };
+    },
+    'ipfix: the latest definition is read while an earlier write still runs': async () => {
+        const { options } = externalStorage();
+        const store = options.onNewTemplate;
+        let writes = 0;
+        // The first write never ends; the later ones end at once, the last one storing the 8-byte definition
+        options.onNewTemplate = template => (writes++ === 0 ? new Promise(() => {}) : store(template));
+        const decoder = Netflow(options);
+        for (let refresh = 0; refresh < 1000; refresh++) {
+            const fields = refresh === 999 ? [[8, 4], [12, 4]] : FLOW_FIELDS;
+            await decoder.deserialize(ipfixMessage([set(2, templateRecord(256, fields))]));
+        }
+
+        return summary(await decoder.deserialize(ipfixMessage([set(256, flowRecords(2))]))); // 24 bytes: 3 records of 8
+    },
 };
 
 module.exports = scenarios;

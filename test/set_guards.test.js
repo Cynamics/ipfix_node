@@ -526,3 +526,26 @@ test('ipfix: a 3-byte length prefix cut short ends the set', async () => {
 
     assert.deepStrictEqual(packet, { ...empty, templates: [403], skipped: [skipped(403, 403, SKIP_REASONS.RECORD_PAST_SET)] });
 });
+
+// RFC 7011 section 8.1: the end of a session withdraws its templates, the ones still being stored too
+test('ipfix: endSession drops the session\'s pending templates', async () => {
+    const { pending, ended } = await decodeWithin('ipfix: endSession drops the session\'s pending templates');
+
+    assert.deepStrictEqual(pending, { ...empty, records: 2 });
+    assert.deepStrictEqual(ended, { ...empty, skipped: [skipped(256, 256, SKIP_REASONS.UNKNOWN_TEMPLATE)] });
+});
+
+// Withdrawals are honored over TCP and SCTP: a caller keeping its own templates has to remove them
+test('external storage over TCP or SCTP without onTemplateWithdrawal is refused when the deserializer is created', async () => {
+    const result = await decodeWithin('external storage over TCP or SCTP without onTemplateWithdrawal is refused when the deserializer is created');
+
+    assert.match(result.tcp, /onTemplateWithdrawal/);
+    assert.match(result.sctp, /onTemplateWithdrawal/);
+    assert.strictEqual(result.udp, 'created');
+});
+
+test('ipfix: the latest definition is read while an earlier write still runs', async () => {
+    const packet = await decodeWithin('ipfix: the latest definition is read while an earlier write still runs');
+
+    assert.deepStrictEqual(packet, { ...empty, records: 3 });
+});
