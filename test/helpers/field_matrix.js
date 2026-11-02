@@ -32,12 +32,15 @@ const valueOf = (recordIndex, length) => Buffer.from(Array.from({ length }, (_, 
 
 const PROTOCOLS = { netflow9: netflow9Message, ipfix: ipfixMessage };
 
-async function decodeAtLength(message, ids, length, parseDataValues) {
+async function decodeAtLength(message, ids, length, parseDataValues, around = run => run()) {
     const list = ids.map(id => [id, length]);
     const records = [0, 1].flatMap(recordIndex => ids.map(() => valueOf(recordIndex, length)));
     const decoder = Netflow({ parseDataValues });
     await decoder.deserialize(message([set(message === ipfixMessage ? 2 : 0, templateRecord(TEMPLATE_ID, list))]));
-    const packet = await decoder.deserialize(message([set(TEMPLATE_ID, Buffer.concat(records))]));
+    let packet;
+    await around(async () => {
+        packet = await decoder.deserialize(message([set(TEMPLATE_ID, Buffer.concat(records))]));
+    });
     return packet.DataSets.flatMap((record, recordIndex) => record.Fields.map(field => [
         `${field.fieldId}/${length}/${recordIndex}`,
         { fieldValue: field.fieldValue, fieldValueParsed: field.fieldValueParsed, sizeInBytes: field.sizeInBytes },
@@ -68,4 +71,4 @@ if (require.main === module) {
     ));
 }
 
-module.exports = { decodeMatrix, UNKNOWN_FIELD };
+module.exports = { decodeMatrix, decodeAtLength, fieldIds, PROTOCOLS };
