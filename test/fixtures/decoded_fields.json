@@ -1,0 +1,6010 @@
+{
+ "netflow9, parseDataValues true": {
+  "0/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 1
+  },
+  "1/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 1
+  },
+  "4/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 1
+  },
+  "6/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 1
+  },
+  "8/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "0.0.0.1",
+   "sizeInBytes": 1
+  },
+  "10/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 1
+  },
+  "27/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "0000:0000:0000:0000:0000:0000:0000:0000",
+   "sizeInBytes": 1
+  },
+  "56/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 1
+  },
+  "70/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 1
+  },
+  "82/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 1
+  },
+  "150/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 1
+  },
+  "152/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 1
+  },
+  "154/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 1
+  },
+  "156/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 1
+  },
+  "276/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 1
+  },
+  "291/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 1
+  },
+  "292/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 1
+  },
+  "293/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 1
+  },
+  "311/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 1
+  },
+  "434/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 1
+  },
+  "32000/1/0": {
+   "fieldValue": "01",
+   "fieldValueParsed": "01",
+   "sizeInBytes": 1
+  },
+  "0/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "237",
+   "sizeInBytes": 1
+  },
+  "1/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "237",
+   "sizeInBytes": 1
+  },
+  "4/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "237",
+   "sizeInBytes": 1
+  },
+  "6/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "237",
+   "sizeInBytes": 1
+  },
+  "8/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "0.0.0.237",
+   "sizeInBytes": 1
+  },
+  "10/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "237",
+   "sizeInBytes": 1
+  },
+  "27/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "0000:0000:0000:0000:0000:0000:0000:0000",
+   "sizeInBytes": 1
+  },
+  "56/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "237",
+   "sizeInBytes": 1
+  },
+  "70/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "237",
+   "sizeInBytes": 1
+  },
+  "82/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "237",
+   "sizeInBytes": 1
+  },
+  "150/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "237",
+   "sizeInBytes": 1
+  },
+  "152/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "237",
+   "sizeInBytes": 1
+  },
+  "154/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "237",
+   "sizeInBytes": 1
+  },
+  "156/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "237",
+   "sizeInBytes": 1
+  },
+  "276/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "237",
+   "sizeInBytes": 1
+  },
+  "291/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "237",
+   "sizeInBytes": 1
+  },
+  "292/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "237",
+   "sizeInBytes": 1
+  },
+  "293/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "237",
+   "sizeInBytes": 1
+  },
+  "311/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "237",
+   "sizeInBytes": 1
+  },
+  "434/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "237",
+   "sizeInBytes": 1
+  },
+  "32000/1/1": {
+   "fieldValue": "ed",
+   "fieldValueParsed": "ed",
+   "sizeInBytes": 1
+  },
+  "0/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "51201",
+   "sizeInBytes": 2
+  },
+  "1/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "51201",
+   "sizeInBytes": 2
+  },
+  "4/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 2
+  },
+  "6/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "51201",
+   "sizeInBytes": 2
+  },
+  "8/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "0.0.200.1",
+   "sizeInBytes": 2
+  },
+  "10/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "51201",
+   "sizeInBytes": 2
+  },
+  "27/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "0000:0000:0000:0000:0000:0000:0000:0000",
+   "sizeInBytes": 2
+  },
+  "56/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "51201",
+   "sizeInBytes": 2
+  },
+  "70/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "51201",
+   "sizeInBytes": 2
+  },
+  "82/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "51201",
+   "sizeInBytes": 2
+  },
+  "150/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "51201",
+   "sizeInBytes": 2
+  },
+  "152/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "51201",
+   "sizeInBytes": 2
+  },
+  "154/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "51201",
+   "sizeInBytes": 2
+  },
+  "156/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "51201",
+   "sizeInBytes": 2
+  },
+  "276/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "51201",
+   "sizeInBytes": 2
+  },
+  "291/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "51201",
+   "sizeInBytes": 2
+  },
+  "292/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "51201",
+   "sizeInBytes": 2
+  },
+  "293/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "51201",
+   "sizeInBytes": 2
+  },
+  "311/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "51201",
+   "sizeInBytes": 2
+  },
+  "434/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "51201",
+   "sizeInBytes": 2
+  },
+  "32000/2/0": {
+   "fieldValue": "c801",
+   "fieldValueParsed": "c801",
+   "sizeInBytes": 2
+  },
+  "0/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "60920",
+   "sizeInBytes": 2
+  },
+  "1/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "60920",
+   "sizeInBytes": 2
+  },
+  "4/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "248",
+   "sizeInBytes": 2
+  },
+  "6/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "60920",
+   "sizeInBytes": 2
+  },
+  "8/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "0.0.237.248",
+   "sizeInBytes": 2
+  },
+  "10/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "60920",
+   "sizeInBytes": 2
+  },
+  "27/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "0000:0000:0000:0000:0000:0000:0000:0000",
+   "sizeInBytes": 2
+  },
+  "56/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "60920",
+   "sizeInBytes": 2
+  },
+  "70/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "60920",
+   "sizeInBytes": 2
+  },
+  "82/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "60920",
+   "sizeInBytes": 2
+  },
+  "150/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "60920",
+   "sizeInBytes": 2
+  },
+  "152/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "60920",
+   "sizeInBytes": 2
+  },
+  "154/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "60920",
+   "sizeInBytes": 2
+  },
+  "156/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "60920",
+   "sizeInBytes": 2
+  },
+  "276/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "60920",
+   "sizeInBytes": 2
+  },
+  "291/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "60920",
+   "sizeInBytes": 2
+  },
+  "292/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "60920",
+   "sizeInBytes": 2
+  },
+  "293/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "60920",
+   "sizeInBytes": 2
+  },
+  "311/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "60920",
+   "sizeInBytes": 2
+  },
+  "434/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "60920",
+   "sizeInBytes": 2
+  },
+  "32000/2/1": {
+   "fieldValue": "edf8",
+   "fieldValueParsed": "edf8",
+   "sizeInBytes": 2
+  },
+  "0/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "1/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "4/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "6/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "8/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "10/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "27/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "56/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "70/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "82/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "150/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "152/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "154/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "156/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "276/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "291/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "292/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "293/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "311/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "434/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "32000/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "0/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "1/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "4/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "6/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "8/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "10/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "27/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "56/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "70/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "82/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "150/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "152/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "154/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "156/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "276/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "291/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "292/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "293/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "311/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "434/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "32000/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "0/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "3369328129",
+   "sizeInBytes": 4
+  },
+  "1/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "3369328129",
+   "sizeInBytes": 4
+  },
+  "4/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 4
+  },
+  "6/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "56833",
+   "sizeInBytes": 4
+  },
+  "8/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "200.211.222.1",
+   "sizeInBytes": 4
+  },
+  "10/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "3369328129",
+   "sizeInBytes": 4
+  },
+  "27/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "0000:0000:0000:0000:0000:0000:0000:0000",
+   "sizeInBytes": 4
+  },
+  "56/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "3369328129",
+   "sizeInBytes": 4
+  },
+  "70/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "3369328129",
+   "sizeInBytes": 4
+  },
+  "82/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "3369328129",
+   "sizeInBytes": 4
+  },
+  "150/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "3369328129",
+   "sizeInBytes": 4
+  },
+  "152/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "3369328129",
+   "sizeInBytes": 4
+  },
+  "154/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "3369328129",
+   "sizeInBytes": 4
+  },
+  "156/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "3369328129",
+   "sizeInBytes": 4
+  },
+  "276/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "3369328129",
+   "sizeInBytes": 4
+  },
+  "291/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "3369328129",
+   "sizeInBytes": 4
+  },
+  "292/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "3369328129",
+   "sizeInBytes": 4
+  },
+  "293/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "3369328129",
+   "sizeInBytes": 4
+  },
+  "311/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "3369328129",
+   "sizeInBytes": 4
+  },
+  "434/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "3369328129",
+   "sizeInBytes": 4
+  },
+  "32000/4/0": {
+   "fieldValue": "c8d3de01",
+   "fieldValueParsed": "c8d3de01",
+   "sizeInBytes": 4
+  },
+  "0/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "3992453902",
+   "sizeInBytes": 4
+  },
+  "1/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "3992453902",
+   "sizeInBytes": 4
+  },
+  "4/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "14",
+   "sizeInBytes": 4
+  },
+  "6/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "782",
+   "sizeInBytes": 4
+  },
+  "8/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "237.248.3.14",
+   "sizeInBytes": 4
+  },
+  "10/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "3992453902",
+   "sizeInBytes": 4
+  },
+  "27/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "0000:0000:0000:0000:0000:0000:0000:0000",
+   "sizeInBytes": 4
+  },
+  "56/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "3992453902",
+   "sizeInBytes": 4
+  },
+  "70/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "3992453902",
+   "sizeInBytes": 4
+  },
+  "82/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "3992453902",
+   "sizeInBytes": 4
+  },
+  "150/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "3992453902",
+   "sizeInBytes": 4
+  },
+  "152/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "3992453902",
+   "sizeInBytes": 4
+  },
+  "154/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "3992453902",
+   "sizeInBytes": 4
+  },
+  "156/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "3992453902",
+   "sizeInBytes": 4
+  },
+  "276/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "3992453902",
+   "sizeInBytes": 4
+  },
+  "291/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "3992453902",
+   "sizeInBytes": 4
+  },
+  "292/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "3992453902",
+   "sizeInBytes": 4
+  },
+  "293/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "3992453902",
+   "sizeInBytes": 4
+  },
+  "311/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "3992453902",
+   "sizeInBytes": 4
+  },
+  "434/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "3992453902",
+   "sizeInBytes": 4
+  },
+  "32000/4/1": {
+   "fieldValue": "edf8030e",
+   "fieldValueParsed": "edf8030e",
+   "sizeInBytes": 4
+  },
+  "0/6/0": {
+   "fieldValue": "c8d3dee9f401",
+   "fieldValueParsed": "c8d3dee9f401",
+   "sizeInBytes": 6
+  },
+  "1/6/0": {
+   "fieldValue": "c8d3dee9f401",
+   "fieldValueParsed": "c8d3dee9f401",
+   "sizeInBytes": 6
+  },
+  "4/6/0": {
+   "fieldValue": 0,
+   "fieldValueParsed": 0,
+   "sizeInBytes": 6
+  },
+  "6/6/0": {
+   "fieldValue": 0,
+   "fieldValueParsed": 0,
+   "sizeInBytes": 6
+  },
+  "8/6/0": {
+   "fieldValue": "0.0.0.0",
+   "fieldValueParsed": "0.0.0.0",
+   "sizeInBytes": 6
+  },
+  "10/6/0": {
+   "fieldValue": 0,
+   "fieldValueParsed": 0,
+   "sizeInBytes": 6
+  },
+  "27/6/0": {
+   "fieldValue": "0000:0000:0000:0000:0000:c8d3:dee9:f401",
+   "fieldValueParsed": "0000:0000:0000:0000:0000:c8d3:dee9:f401",
+   "sizeInBytes": 6
+  },
+  "56/6/0": {
+   "fieldValue": "c8:d3:de:e9:f4:01",
+   "fieldValueParsed": "c8:d3:de:e9:f4:01",
+   "sizeInBytes": 6
+  },
+  "70/6/0": {
+   "fieldValue": "c8d3dee9f401",
+   "fieldValueParsed": "c8d3dee9f401",
+   "sizeInBytes": 6
+  },
+  "82/6/0": {
+   "fieldValue": "c8d3dee9f401",
+   "fieldValueParsed": "c8d3dee9f401",
+   "sizeInBytes": 6
+  },
+  "150/6/0": {
+   "fieldValue": "c8d3dee9f401",
+   "fieldValueParsed": "c8d3dee9f401",
+   "sizeInBytes": 6
+  },
+  "152/6/0": {
+   "fieldValue": "c8d3dee9f401",
+   "fieldValueParsed": "c8d3dee9f401",
+   "sizeInBytes": 6
+  },
+  "154/6/0": {
+   "fieldValue": "c8d3dee9f401",
+   "fieldValueParsed": "c8d3dee9f401",
+   "sizeInBytes": 6
+  },
+  "156/6/0": {
+   "fieldValue": "c8d3dee9f401",
+   "fieldValueParsed": "c8d3dee9f401",
+   "sizeInBytes": 6
+  },
+  "276/6/0": {
+   "fieldValue": "c8d3dee9f401",
+   "fieldValueParsed": "c8d3dee9f401",
+   "sizeInBytes": 6
+  },
+  "291/6/0": {
+   "fieldValue": "c8d3dee9f401",
+   "fieldValueParsed": "c8d3dee9f401",
+   "sizeInBytes": 6
+  },
+  "292/6/0": {
+   "fieldValue": "c8d3dee9f401",
+   "fieldValueParsed": "c8d3dee9f401",
+   "sizeInBytes": 6
+  },
+  "293/6/0": {
+   "fieldValue": "c8d3dee9f401",
+   "fieldValueParsed": "c8d3dee9f401",
+   "sizeInBytes": 6
+  },
+  "311/6/0": {
+   "fieldValue": "c8d3dee9f401",
+   "fieldValueParsed": "c8d3dee9f401",
+   "sizeInBytes": 6
+  },
+  "434/6/0": {
+   "fieldValue": "c8d3dee9f401",
+   "fieldValueParsed": "c8d3dee9f401",
+   "sizeInBytes": 6
+  },
+  "32000/6/0": {
+   "fieldValue": "c8d3dee9f401",
+   "fieldValueParsed": "c8d3dee9f401",
+   "sizeInBytes": 6
+  },
+  "0/6/1": {
+   "fieldValue": "edf8030e1924",
+   "fieldValueParsed": "edf8030e1924",
+   "sizeInBytes": 6
+  },
+  "1/6/1": {
+   "fieldValue": "edf8030e1924",
+   "fieldValueParsed": "edf8030e1924",
+   "sizeInBytes": 6
+  },
+  "4/6/1": {
+   "fieldValue": 0,
+   "fieldValueParsed": 0,
+   "sizeInBytes": 6
+  },
+  "6/6/1": {
+   "fieldValue": 0,
+   "fieldValueParsed": 0,
+   "sizeInBytes": 6
+  },
+  "8/6/1": {
+   "fieldValue": "0.0.0.0",
+   "fieldValueParsed": "0.0.0.0",
+   "sizeInBytes": 6
+  },
+  "10/6/1": {
+   "fieldValue": 0,
+   "fieldValueParsed": 0,
+   "sizeInBytes": 6
+  },
+  "27/6/1": {
+   "fieldValue": "0000:0000:0000:0000:0000:edf8:030e:1924",
+   "fieldValueParsed": "0000:0000:0000:0000:0000:edf8:030e:1924",
+   "sizeInBytes": 6
+  },
+  "56/6/1": {
+   "fieldValue": "ed:f8:03:0e:19:24",
+   "fieldValueParsed": "ed:f8:03:0e:19:24",
+   "sizeInBytes": 6
+  },
+  "70/6/1": {
+   "fieldValue": "edf8030e1924",
+   "fieldValueParsed": "edf8030e1924",
+   "sizeInBytes": 6
+  },
+  "82/6/1": {
+   "fieldValue": "edf8030e1924",
+   "fieldValueParsed": "edf8030e1924",
+   "sizeInBytes": 6
+  },
+  "150/6/1": {
+   "fieldValue": "edf8030e1924",
+   "fieldValueParsed": "edf8030e1924",
+   "sizeInBytes": 6
+  },
+  "152/6/1": {
+   "fieldValue": "edf8030e1924",
+   "fieldValueParsed": "edf8030e1924",
+   "sizeInBytes": 6
+  },
+  "154/6/1": {
+   "fieldValue": "edf8030e1924",
+   "fieldValueParsed": "edf8030e1924",
+   "sizeInBytes": 6
+  },
+  "156/6/1": {
+   "fieldValue": "edf8030e1924",
+   "fieldValueParsed": "edf8030e1924",
+   "sizeInBytes": 6
+  },
+  "276/6/1": {
+   "fieldValue": "edf8030e1924",
+   "fieldValueParsed": "edf8030e1924",
+   "sizeInBytes": 6
+  },
+  "291/6/1": {
+   "fieldValue": "edf8030e1924",
+   "fieldValueParsed": "edf8030e1924",
+   "sizeInBytes": 6
+  },
+  "292/6/1": {
+   "fieldValue": "edf8030e1924",
+   "fieldValueParsed": "edf8030e1924",
+   "sizeInBytes": 6
+  },
+  "293/6/1": {
+   "fieldValue": "edf8030e1924",
+   "fieldValueParsed": "edf8030e1924",
+   "sizeInBytes": 6
+  },
+  "311/6/1": {
+   "fieldValue": "edf8030e1924",
+   "fieldValueParsed": "edf8030e1924",
+   "sizeInBytes": 6
+  },
+  "434/6/1": {
+   "fieldValue": "edf8030e1924",
+   "fieldValueParsed": "edf8030e1924",
+   "sizeInBytes": 6
+  },
+  "32000/6/1": {
+   "fieldValue": "edf8030e1924",
+   "fieldValueParsed": "edf8030e1924",
+   "sizeInBytes": 6
+  },
+  "0/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "1/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "4/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "6/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "8/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "10/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "27/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "56/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "70/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "82/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "150/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "152/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "154/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "156/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "276/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "291/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "292/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "293/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "311/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "434/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "32000/8/0": {
+   "fieldValue": "c8d3dee9f4ff0a01",
+   "fieldValueParsed": "c8d3dee9f4ff0a01",
+   "sizeInBytes": 8
+  },
+  "0/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "1/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "4/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "6/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "8/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "10/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "27/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "56/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "70/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "82/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "150/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "152/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "154/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "156/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "276/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "291/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "292/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "293/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "311/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "434/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "32000/8/1": {
+   "fieldValue": "edf8030e19242f3a",
+   "fieldValueParsed": "edf8030e19242f3a",
+   "sizeInBytes": 8
+  },
+  "0/16/0": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "1/16/0": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "4/16/0": {
+   "fieldValueParsed": "0",
+   "sizeInBytes": 16
+  },
+  "6/16/0": {
+   "fieldValueParsed": "0",
+   "sizeInBytes": 16
+  },
+  "8/16/0": {
+   "fieldValueParsed": "0.0.0.0",
+   "sizeInBytes": 16
+  },
+  "10/16/0": {
+   "fieldValueParsed": "0",
+   "sizeInBytes": 16
+  },
+  "27/16/0": {
+   "fieldValueParsed": "c8d3:dee9:f4ff:0a15:202b:3641:4c57:6201",
+   "sizeInBytes": 16
+  },
+  "56/16/0": {
+   "fieldValueParsed": "20:0,:21:1,:22:2,:23:3,:24:4,:25:5,:10:,2:1,:32:,4:3,:54:,6:5,:76:,8:7,:98:,1",
+   "sizeInBytes": 16
+  },
+  "70/16/0": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "82/16/0": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "150/16/0": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "152/16/0": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "154/16/0": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "156/16/0": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "276/16/0": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "291/16/0": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "292/16/0": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "293/16/0": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "311/16/0": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "434/16/0": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "32000/16/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c576201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c576201",
+   "sizeInBytes": 16
+  },
+  "0/16/1": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "1/16/1": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "4/16/1": {
+   "fieldValueParsed": "0",
+   "sizeInBytes": 16
+  },
+  "6/16/1": {
+   "fieldValueParsed": "0",
+   "sizeInBytes": 16
+  },
+  "8/16/1": {
+   "fieldValueParsed": "0.0.0.0",
+   "sizeInBytes": 16
+  },
+  "10/16/1": {
+   "fieldValueParsed": "0",
+   "sizeInBytes": 16
+  },
+  "27/16/1": {
+   "fieldValueParsed": "edf8:030e:1924:2f3a:4550:5b66:717c:8792",
+   "sizeInBytes": 16
+  },
+  "56/16/1": {
+   "fieldValueParsed": "23:7,:24:8,:3,:14:,2:5,:36:,4:7,:58:,6:9,:80:,9:1,:10:2,:11:3,:12:4,:13:5,:14:6",
+   "sizeInBytes": 16
+  },
+  "70/16/1": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "82/16/1": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "150/16/1": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "152/16/1": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "154/16/1": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "156/16/1": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "276/16/1": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "291/16/1": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "292/16/1": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "293/16/1": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "311/16/1": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "434/16/1": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "32000/16/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c8792",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c8792",
+   "sizeInBytes": 16
+  },
+  "0/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "1/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "4/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "6/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "8/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "10/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "27/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "56/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "70/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "82/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "150/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "152/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "154/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "156/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "276/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "291/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "292/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "293/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "311/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "434/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "32000/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "0/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "1/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "4/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "6/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "8/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "10/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "27/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "56/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "70/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "82/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "150/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "152/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "154/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "156/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "276/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "291/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "292/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "293/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "311/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "434/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "32000/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  }
+ },
+ "netflow9, parseDataValues false": {
+  "0/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "1/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "4/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "6/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "8/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "10/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "27/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "56/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "70/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "82/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "150/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "152/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "154/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "156/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "276/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "291/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "292/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "293/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "311/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "434/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "32000/1/0": {
+   "fieldValue": "01",
+   "fieldValueParsed": "01",
+   "sizeInBytes": 1
+  },
+  "0/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "1/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "4/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "6/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "8/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "10/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "27/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "56/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "70/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "82/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "150/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "152/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "154/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "156/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "276/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "291/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "292/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "293/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "311/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "434/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "32000/1/1": {
+   "fieldValue": "ed",
+   "fieldValueParsed": "ed",
+   "sizeInBytes": 1
+  },
+  "0/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "1/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "4/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "6/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "8/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "10/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "27/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "56/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "70/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "82/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "150/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "152/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "154/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "156/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "276/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "291/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "292/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "293/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "311/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "434/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "32000/2/0": {
+   "fieldValue": "c801",
+   "fieldValueParsed": "c801",
+   "sizeInBytes": 2
+  },
+  "0/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "1/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "4/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "6/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "8/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "10/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "27/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "56/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "70/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "82/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "150/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "152/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "154/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "156/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "276/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "291/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "292/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "293/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "311/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "434/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "32000/2/1": {
+   "fieldValue": "edf8",
+   "fieldValueParsed": "edf8",
+   "sizeInBytes": 2
+  },
+  "0/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "1/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "4/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "6/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "8/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "10/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "27/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "56/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "70/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "82/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "150/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "152/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "154/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "156/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "276/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "291/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "292/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "293/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "311/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "434/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "32000/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "0/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "1/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "4/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "6/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "8/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "10/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "27/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "56/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "70/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "82/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "150/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "152/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "154/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "156/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "276/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "291/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "292/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "293/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "311/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "434/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "32000/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "0/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "1/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "4/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "6/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "8/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "10/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "27/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "56/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "70/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "82/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "150/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "152/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "154/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "156/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "276/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "291/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "292/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "293/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "311/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "434/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "32000/4/0": {
+   "fieldValue": "c8d3de01",
+   "fieldValueParsed": "c8d3de01",
+   "sizeInBytes": 4
+  },
+  "0/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "1/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "4/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "6/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "8/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "10/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "27/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "56/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "70/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "82/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "150/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "152/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "154/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "156/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "276/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "291/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "292/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "293/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "311/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "434/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "32000/4/1": {
+   "fieldValue": "edf8030e",
+   "fieldValueParsed": "edf8030e",
+   "sizeInBytes": 4
+  },
+  "0/6/0": {
+   "sizeInBytes": 6
+  },
+  "1/6/0": {
+   "sizeInBytes": 6
+  },
+  "4/6/0": {
+   "sizeInBytes": 6
+  },
+  "6/6/0": {
+   "sizeInBytes": 6
+  },
+  "8/6/0": {
+   "sizeInBytes": 6
+  },
+  "10/6/0": {
+   "sizeInBytes": 6
+  },
+  "27/6/0": {
+   "sizeInBytes": 6
+  },
+  "56/6/0": {
+   "sizeInBytes": 6
+  },
+  "70/6/0": {
+   "sizeInBytes": 6
+  },
+  "82/6/0": {
+   "sizeInBytes": 6
+  },
+  "150/6/0": {
+   "sizeInBytes": 6
+  },
+  "152/6/0": {
+   "sizeInBytes": 6
+  },
+  "154/6/0": {
+   "sizeInBytes": 6
+  },
+  "156/6/0": {
+   "sizeInBytes": 6
+  },
+  "276/6/0": {
+   "sizeInBytes": 6
+  },
+  "291/6/0": {
+   "sizeInBytes": 6
+  },
+  "292/6/0": {
+   "sizeInBytes": 6
+  },
+  "293/6/0": {
+   "sizeInBytes": 6
+  },
+  "311/6/0": {
+   "sizeInBytes": 6
+  },
+  "434/6/0": {
+   "sizeInBytes": 6
+  },
+  "32000/6/0": {
+   "fieldValue": "c8d3dee9f401",
+   "fieldValueParsed": "c8d3dee9f401",
+   "sizeInBytes": 6
+  },
+  "0/6/1": {
+   "sizeInBytes": 6
+  },
+  "1/6/1": {
+   "sizeInBytes": 6
+  },
+  "4/6/1": {
+   "sizeInBytes": 6
+  },
+  "6/6/1": {
+   "sizeInBytes": 6
+  },
+  "8/6/1": {
+   "sizeInBytes": 6
+  },
+  "10/6/1": {
+   "sizeInBytes": 6
+  },
+  "27/6/1": {
+   "sizeInBytes": 6
+  },
+  "56/6/1": {
+   "sizeInBytes": 6
+  },
+  "70/6/1": {
+   "sizeInBytes": 6
+  },
+  "82/6/1": {
+   "sizeInBytes": 6
+  },
+  "150/6/1": {
+   "sizeInBytes": 6
+  },
+  "152/6/1": {
+   "sizeInBytes": 6
+  },
+  "154/6/1": {
+   "sizeInBytes": 6
+  },
+  "156/6/1": {
+   "sizeInBytes": 6
+  },
+  "276/6/1": {
+   "sizeInBytes": 6
+  },
+  "291/6/1": {
+   "sizeInBytes": 6
+  },
+  "292/6/1": {
+   "sizeInBytes": 6
+  },
+  "293/6/1": {
+   "sizeInBytes": 6
+  },
+  "311/6/1": {
+   "sizeInBytes": 6
+  },
+  "434/6/1": {
+   "sizeInBytes": 6
+  },
+  "32000/6/1": {
+   "fieldValue": "edf8030e1924",
+   "fieldValueParsed": "edf8030e1924",
+   "sizeInBytes": 6
+  },
+  "0/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "1/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "4/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "6/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "8/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "10/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "27/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "56/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "70/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "82/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "150/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "152/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "154/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "156/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "276/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "291/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "292/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "293/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "311/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "434/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "32000/8/0": {
+   "fieldValue": "c8d3dee9f4ff0a01",
+   "fieldValueParsed": "c8d3dee9f4ff0a01",
+   "sizeInBytes": 8
+  },
+  "0/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "1/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "4/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "6/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "8/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "10/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "27/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "56/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "70/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "82/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "150/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "152/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "154/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "156/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "276/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "291/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "292/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "293/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "311/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "434/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "32000/8/1": {
+   "fieldValue": "edf8030e19242f3a",
+   "fieldValueParsed": "edf8030e19242f3a",
+   "sizeInBytes": 8
+  },
+  "0/16/0": {
+   "sizeInBytes": 16
+  },
+  "1/16/0": {
+   "sizeInBytes": 16
+  },
+  "4/16/0": {
+   "sizeInBytes": 16
+  },
+  "6/16/0": {
+   "sizeInBytes": 16
+  },
+  "8/16/0": {
+   "sizeInBytes": 16
+  },
+  "10/16/0": {
+   "sizeInBytes": 16
+  },
+  "27/16/0": {
+   "sizeInBytes": 16
+  },
+  "56/16/0": {
+   "sizeInBytes": 16
+  },
+  "70/16/0": {
+   "sizeInBytes": 16
+  },
+  "82/16/0": {
+   "sizeInBytes": 16
+  },
+  "150/16/0": {
+   "sizeInBytes": 16
+  },
+  "152/16/0": {
+   "sizeInBytes": 16
+  },
+  "154/16/0": {
+   "sizeInBytes": 16
+  },
+  "156/16/0": {
+   "sizeInBytes": 16
+  },
+  "276/16/0": {
+   "sizeInBytes": 16
+  },
+  "291/16/0": {
+   "sizeInBytes": 16
+  },
+  "292/16/0": {
+   "sizeInBytes": 16
+  },
+  "293/16/0": {
+   "sizeInBytes": 16
+  },
+  "311/16/0": {
+   "sizeInBytes": 16
+  },
+  "434/16/0": {
+   "sizeInBytes": 16
+  },
+  "32000/16/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c576201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c576201",
+   "sizeInBytes": 16
+  },
+  "0/16/1": {
+   "sizeInBytes": 16
+  },
+  "1/16/1": {
+   "sizeInBytes": 16
+  },
+  "4/16/1": {
+   "sizeInBytes": 16
+  },
+  "6/16/1": {
+   "sizeInBytes": 16
+  },
+  "8/16/1": {
+   "sizeInBytes": 16
+  },
+  "10/16/1": {
+   "sizeInBytes": 16
+  },
+  "27/16/1": {
+   "sizeInBytes": 16
+  },
+  "56/16/1": {
+   "sizeInBytes": 16
+  },
+  "70/16/1": {
+   "sizeInBytes": 16
+  },
+  "82/16/1": {
+   "sizeInBytes": 16
+  },
+  "150/16/1": {
+   "sizeInBytes": 16
+  },
+  "152/16/1": {
+   "sizeInBytes": 16
+  },
+  "154/16/1": {
+   "sizeInBytes": 16
+  },
+  "156/16/1": {
+   "sizeInBytes": 16
+  },
+  "276/16/1": {
+   "sizeInBytes": 16
+  },
+  "291/16/1": {
+   "sizeInBytes": 16
+  },
+  "292/16/1": {
+   "sizeInBytes": 16
+  },
+  "293/16/1": {
+   "sizeInBytes": 16
+  },
+  "311/16/1": {
+   "sizeInBytes": 16
+  },
+  "434/16/1": {
+   "sizeInBytes": 16
+  },
+  "32000/16/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c8792",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c8792",
+   "sizeInBytes": 16
+  },
+  "0/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "1/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "4/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "6/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "8/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "10/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "27/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "56/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "70/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "82/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "150/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "152/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "154/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "156/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "276/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "291/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "292/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "293/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "311/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "434/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "32000/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "0/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "1/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "4/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "6/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "8/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "10/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "27/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "56/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "70/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "82/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "150/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "152/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "154/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "156/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "276/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "291/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "292/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "293/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "311/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "434/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "32000/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  }
+ },
+ "ipfix, parseDataValues true": {
+  "0/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 1
+  },
+  "1/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 1
+  },
+  "4/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 1
+  },
+  "6/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 1
+  },
+  "8/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "0.0.0.1",
+   "sizeInBytes": 1
+  },
+  "10/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 1
+  },
+  "27/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "0000:0000:0000:0000:0000:0000:0000:0000",
+   "sizeInBytes": 1
+  },
+  "56/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 1
+  },
+  "70/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 1
+  },
+  "82/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 1
+  },
+  "150/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 1
+  },
+  "152/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 1
+  },
+  "154/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 1
+  },
+  "156/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 1
+  },
+  "276/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 1
+  },
+  "291/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 1
+  },
+  "292/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 1
+  },
+  "293/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 1
+  },
+  "311/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 1
+  },
+  "434/1/0": {
+   "fieldValue": "1",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 1
+  },
+  "32000/1/0": {
+   "fieldValue": "01",
+   "fieldValueParsed": "01",
+   "sizeInBytes": 1
+  },
+  "0/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "237",
+   "sizeInBytes": 1
+  },
+  "1/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "237",
+   "sizeInBytes": 1
+  },
+  "4/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "237",
+   "sizeInBytes": 1
+  },
+  "6/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "237",
+   "sizeInBytes": 1
+  },
+  "8/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "0.0.0.237",
+   "sizeInBytes": 1
+  },
+  "10/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "237",
+   "sizeInBytes": 1
+  },
+  "27/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "0000:0000:0000:0000:0000:0000:0000:0000",
+   "sizeInBytes": 1
+  },
+  "56/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "237",
+   "sizeInBytes": 1
+  },
+  "70/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "237",
+   "sizeInBytes": 1
+  },
+  "82/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "237",
+   "sizeInBytes": 1
+  },
+  "150/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "237",
+   "sizeInBytes": 1
+  },
+  "152/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "237",
+   "sizeInBytes": 1
+  },
+  "154/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "237",
+   "sizeInBytes": 1
+  },
+  "156/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "237",
+   "sizeInBytes": 1
+  },
+  "276/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "237",
+   "sizeInBytes": 1
+  },
+  "291/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "237",
+   "sizeInBytes": 1
+  },
+  "292/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "237",
+   "sizeInBytes": 1
+  },
+  "293/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "237",
+   "sizeInBytes": 1
+  },
+  "311/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "237",
+   "sizeInBytes": 1
+  },
+  "434/1/1": {
+   "fieldValue": "237",
+   "fieldValueParsed": "237",
+   "sizeInBytes": 1
+  },
+  "32000/1/1": {
+   "fieldValue": "ed",
+   "fieldValueParsed": "ed",
+   "sizeInBytes": 1
+  },
+  "0/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "51201",
+   "sizeInBytes": 2
+  },
+  "1/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "51201",
+   "sizeInBytes": 2
+  },
+  "4/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 2
+  },
+  "6/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "51201",
+   "sizeInBytes": 2
+  },
+  "8/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "0.0.200.1",
+   "sizeInBytes": 2
+  },
+  "10/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "51201",
+   "sizeInBytes": 2
+  },
+  "27/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "0000:0000:0000:0000:0000:0000:0000:0000",
+   "sizeInBytes": 2
+  },
+  "56/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "51201",
+   "sizeInBytes": 2
+  },
+  "70/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "51201",
+   "sizeInBytes": 2
+  },
+  "82/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "51201",
+   "sizeInBytes": 2
+  },
+  "150/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "51201",
+   "sizeInBytes": 2
+  },
+  "152/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "51201",
+   "sizeInBytes": 2
+  },
+  "154/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "51201",
+   "sizeInBytes": 2
+  },
+  "156/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "51201",
+   "sizeInBytes": 2
+  },
+  "276/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "51201",
+   "sizeInBytes": 2
+  },
+  "291/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "51201",
+   "sizeInBytes": 2
+  },
+  "292/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "51201",
+   "sizeInBytes": 2
+  },
+  "293/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "51201",
+   "sizeInBytes": 2
+  },
+  "311/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "51201",
+   "sizeInBytes": 2
+  },
+  "434/2/0": {
+   "fieldValue": "51201",
+   "fieldValueParsed": "51201",
+   "sizeInBytes": 2
+  },
+  "32000/2/0": {
+   "fieldValue": "c801",
+   "fieldValueParsed": "c801",
+   "sizeInBytes": 2
+  },
+  "0/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "60920",
+   "sizeInBytes": 2
+  },
+  "1/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "60920",
+   "sizeInBytes": 2
+  },
+  "4/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "248",
+   "sizeInBytes": 2
+  },
+  "6/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "60920",
+   "sizeInBytes": 2
+  },
+  "8/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "0.0.237.248",
+   "sizeInBytes": 2
+  },
+  "10/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "60920",
+   "sizeInBytes": 2
+  },
+  "27/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "0000:0000:0000:0000:0000:0000:0000:0000",
+   "sizeInBytes": 2
+  },
+  "56/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "60920",
+   "sizeInBytes": 2
+  },
+  "70/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "60920",
+   "sizeInBytes": 2
+  },
+  "82/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "60920",
+   "sizeInBytes": 2
+  },
+  "150/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "60920",
+   "sizeInBytes": 2
+  },
+  "152/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "60920",
+   "sizeInBytes": 2
+  },
+  "154/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "60920",
+   "sizeInBytes": 2
+  },
+  "156/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "60920",
+   "sizeInBytes": 2
+  },
+  "276/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "60920",
+   "sizeInBytes": 2
+  },
+  "291/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "60920",
+   "sizeInBytes": 2
+  },
+  "292/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "60920",
+   "sizeInBytes": 2
+  },
+  "293/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "60920",
+   "sizeInBytes": 2
+  },
+  "311/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "60920",
+   "sizeInBytes": 2
+  },
+  "434/2/1": {
+   "fieldValue": "60920",
+   "fieldValueParsed": "60920",
+   "sizeInBytes": 2
+  },
+  "32000/2/1": {
+   "fieldValue": "edf8",
+   "fieldValueParsed": "edf8",
+   "sizeInBytes": 2
+  },
+  "0/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "1/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "4/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "6/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "8/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "10/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "27/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "56/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "70/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "82/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "150/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "152/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "154/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "156/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "276/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "291/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "292/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "293/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "311/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "434/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "32000/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "0/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "1/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "4/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "6/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "8/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "10/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "27/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "56/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "70/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "82/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "150/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "152/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "154/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "156/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "276/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "291/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "292/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "293/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "311/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "434/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "32000/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "0/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "3369328129",
+   "sizeInBytes": 4
+  },
+  "1/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "3369328129",
+   "sizeInBytes": 4
+  },
+  "4/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "1",
+   "sizeInBytes": 4
+  },
+  "6/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "56833",
+   "sizeInBytes": 4
+  },
+  "8/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "200.211.222.1",
+   "sizeInBytes": 4
+  },
+  "10/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "3369328129",
+   "sizeInBytes": 4
+  },
+  "27/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "0000:0000:0000:0000:0000:0000:0000:0000",
+   "sizeInBytes": 4
+  },
+  "56/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "3369328129",
+   "sizeInBytes": 4
+  },
+  "70/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "3369328129",
+   "sizeInBytes": 4
+  },
+  "82/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "3369328129",
+   "sizeInBytes": 4
+  },
+  "150/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "3369328129",
+   "sizeInBytes": 4
+  },
+  "152/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "3369328129",
+   "sizeInBytes": 4
+  },
+  "154/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "3369328129",
+   "sizeInBytes": 4
+  },
+  "156/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "3369328129",
+   "sizeInBytes": 4
+  },
+  "276/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "3369328129",
+   "sizeInBytes": 4
+  },
+  "291/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "3369328129",
+   "sizeInBytes": 4
+  },
+  "292/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "3369328129",
+   "sizeInBytes": 4
+  },
+  "293/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "3369328129",
+   "sizeInBytes": 4
+  },
+  "311/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "3369328129",
+   "sizeInBytes": 4
+  },
+  "434/4/0": {
+   "fieldValue": "3369328129",
+   "fieldValueParsed": "3369328129",
+   "sizeInBytes": 4
+  },
+  "32000/4/0": {
+   "fieldValue": "c8d3de01",
+   "fieldValueParsed": "c8d3de01",
+   "sizeInBytes": 4
+  },
+  "0/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "3992453902",
+   "sizeInBytes": 4
+  },
+  "1/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "3992453902",
+   "sizeInBytes": 4
+  },
+  "4/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "14",
+   "sizeInBytes": 4
+  },
+  "6/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "782",
+   "sizeInBytes": 4
+  },
+  "8/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "237.248.3.14",
+   "sizeInBytes": 4
+  },
+  "10/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "3992453902",
+   "sizeInBytes": 4
+  },
+  "27/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "0000:0000:0000:0000:0000:0000:0000:0000",
+   "sizeInBytes": 4
+  },
+  "56/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "3992453902",
+   "sizeInBytes": 4
+  },
+  "70/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "3992453902",
+   "sizeInBytes": 4
+  },
+  "82/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "3992453902",
+   "sizeInBytes": 4
+  },
+  "150/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "3992453902",
+   "sizeInBytes": 4
+  },
+  "152/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "3992453902",
+   "sizeInBytes": 4
+  },
+  "154/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "3992453902",
+   "sizeInBytes": 4
+  },
+  "156/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "3992453902",
+   "sizeInBytes": 4
+  },
+  "276/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "3992453902",
+   "sizeInBytes": 4
+  },
+  "291/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "3992453902",
+   "sizeInBytes": 4
+  },
+  "292/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "3992453902",
+   "sizeInBytes": 4
+  },
+  "293/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "3992453902",
+   "sizeInBytes": 4
+  },
+  "311/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "3992453902",
+   "sizeInBytes": 4
+  },
+  "434/4/1": {
+   "fieldValue": "3992453902",
+   "fieldValueParsed": "3992453902",
+   "sizeInBytes": 4
+  },
+  "32000/4/1": {
+   "fieldValue": "edf8030e",
+   "fieldValueParsed": "edf8030e",
+   "sizeInBytes": 4
+  },
+  "0/6/0": {
+   "fieldValue": "c8d3dee9f401",
+   "fieldValueParsed": "c8d3dee9f401",
+   "sizeInBytes": 6
+  },
+  "1/6/0": {
+   "fieldValue": "c8d3dee9f401",
+   "fieldValueParsed": "c8d3dee9f401",
+   "sizeInBytes": 6
+  },
+  "4/6/0": {
+   "fieldValue": 0,
+   "fieldValueParsed": 0,
+   "sizeInBytes": 6
+  },
+  "6/6/0": {
+   "fieldValue": 0,
+   "fieldValueParsed": 0,
+   "sizeInBytes": 6
+  },
+  "8/6/0": {
+   "fieldValue": "0.0.0.0",
+   "fieldValueParsed": "0.0.0.0",
+   "sizeInBytes": 6
+  },
+  "10/6/0": {
+   "fieldValue": 0,
+   "fieldValueParsed": 0,
+   "sizeInBytes": 6
+  },
+  "27/6/0": {
+   "fieldValue": "0000:0000:0000:0000:0000:c8d3:dee9:f401",
+   "fieldValueParsed": "0000:0000:0000:0000:0000:c8d3:dee9:f401",
+   "sizeInBytes": 6
+  },
+  "56/6/0": {
+   "fieldValue": "c8:d3:de:e9:f4:01",
+   "fieldValueParsed": "c8:d3:de:e9:f4:01",
+   "sizeInBytes": 6
+  },
+  "70/6/0": {
+   "fieldValue": "c8d3dee9f401",
+   "fieldValueParsed": "c8d3dee9f401",
+   "sizeInBytes": 6
+  },
+  "82/6/0": {
+   "fieldValue": "c8d3dee9f401",
+   "fieldValueParsed": "c8d3dee9f401",
+   "sizeInBytes": 6
+  },
+  "150/6/0": {
+   "fieldValue": "c8d3dee9f401",
+   "fieldValueParsed": "c8d3dee9f401",
+   "sizeInBytes": 6
+  },
+  "152/6/0": {
+   "fieldValue": "c8d3dee9f401",
+   "fieldValueParsed": "c8d3dee9f401",
+   "sizeInBytes": 6
+  },
+  "154/6/0": {
+   "fieldValue": "c8d3dee9f401",
+   "fieldValueParsed": "c8d3dee9f401",
+   "sizeInBytes": 6
+  },
+  "156/6/0": {
+   "fieldValue": "c8d3dee9f401",
+   "fieldValueParsed": "c8d3dee9f401",
+   "sizeInBytes": 6
+  },
+  "276/6/0": {
+   "fieldValue": "c8d3dee9f401",
+   "fieldValueParsed": "c8d3dee9f401",
+   "sizeInBytes": 6
+  },
+  "291/6/0": {
+   "fieldValue": "c8d3dee9f401",
+   "fieldValueParsed": "c8d3dee9f401",
+   "sizeInBytes": 6
+  },
+  "292/6/0": {
+   "fieldValue": "c8d3dee9f401",
+   "fieldValueParsed": "c8d3dee9f401",
+   "sizeInBytes": 6
+  },
+  "293/6/0": {
+   "fieldValue": "c8d3dee9f401",
+   "fieldValueParsed": "c8d3dee9f401",
+   "sizeInBytes": 6
+  },
+  "311/6/0": {
+   "fieldValue": "c8d3dee9f401",
+   "fieldValueParsed": "c8d3dee9f401",
+   "sizeInBytes": 6
+  },
+  "434/6/0": {
+   "fieldValue": "c8d3dee9f401",
+   "fieldValueParsed": "c8d3dee9f401",
+   "sizeInBytes": 6
+  },
+  "32000/6/0": {
+   "fieldValue": "c8d3dee9f401",
+   "fieldValueParsed": "c8d3dee9f401",
+   "sizeInBytes": 6
+  },
+  "0/6/1": {
+   "fieldValue": "edf8030e1924",
+   "fieldValueParsed": "edf8030e1924",
+   "sizeInBytes": 6
+  },
+  "1/6/1": {
+   "fieldValue": "edf8030e1924",
+   "fieldValueParsed": "edf8030e1924",
+   "sizeInBytes": 6
+  },
+  "4/6/1": {
+   "fieldValue": 0,
+   "fieldValueParsed": 0,
+   "sizeInBytes": 6
+  },
+  "6/6/1": {
+   "fieldValue": 0,
+   "fieldValueParsed": 0,
+   "sizeInBytes": 6
+  },
+  "8/6/1": {
+   "fieldValue": "0.0.0.0",
+   "fieldValueParsed": "0.0.0.0",
+   "sizeInBytes": 6
+  },
+  "10/6/1": {
+   "fieldValue": 0,
+   "fieldValueParsed": 0,
+   "sizeInBytes": 6
+  },
+  "27/6/1": {
+   "fieldValue": "0000:0000:0000:0000:0000:edf8:030e:1924",
+   "fieldValueParsed": "0000:0000:0000:0000:0000:edf8:030e:1924",
+   "sizeInBytes": 6
+  },
+  "56/6/1": {
+   "fieldValue": "ed:f8:03:0e:19:24",
+   "fieldValueParsed": "ed:f8:03:0e:19:24",
+   "sizeInBytes": 6
+  },
+  "70/6/1": {
+   "fieldValue": "edf8030e1924",
+   "fieldValueParsed": "edf8030e1924",
+   "sizeInBytes": 6
+  },
+  "82/6/1": {
+   "fieldValue": "edf8030e1924",
+   "fieldValueParsed": "edf8030e1924",
+   "sizeInBytes": 6
+  },
+  "150/6/1": {
+   "fieldValue": "edf8030e1924",
+   "fieldValueParsed": "edf8030e1924",
+   "sizeInBytes": 6
+  },
+  "152/6/1": {
+   "fieldValue": "edf8030e1924",
+   "fieldValueParsed": "edf8030e1924",
+   "sizeInBytes": 6
+  },
+  "154/6/1": {
+   "fieldValue": "edf8030e1924",
+   "fieldValueParsed": "edf8030e1924",
+   "sizeInBytes": 6
+  },
+  "156/6/1": {
+   "fieldValue": "edf8030e1924",
+   "fieldValueParsed": "edf8030e1924",
+   "sizeInBytes": 6
+  },
+  "276/6/1": {
+   "fieldValue": "edf8030e1924",
+   "fieldValueParsed": "edf8030e1924",
+   "sizeInBytes": 6
+  },
+  "291/6/1": {
+   "fieldValue": "edf8030e1924",
+   "fieldValueParsed": "edf8030e1924",
+   "sizeInBytes": 6
+  },
+  "292/6/1": {
+   "fieldValue": "edf8030e1924",
+   "fieldValueParsed": "edf8030e1924",
+   "sizeInBytes": 6
+  },
+  "293/6/1": {
+   "fieldValue": "edf8030e1924",
+   "fieldValueParsed": "edf8030e1924",
+   "sizeInBytes": 6
+  },
+  "311/6/1": {
+   "fieldValue": "edf8030e1924",
+   "fieldValueParsed": "edf8030e1924",
+   "sizeInBytes": 6
+  },
+  "434/6/1": {
+   "fieldValue": "edf8030e1924",
+   "fieldValueParsed": "edf8030e1924",
+   "sizeInBytes": 6
+  },
+  "32000/6/1": {
+   "fieldValue": "edf8030e1924",
+   "fieldValueParsed": "edf8030e1924",
+   "sizeInBytes": 6
+  },
+  "0/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "1/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "4/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "6/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "8/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "10/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "27/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "56/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "70/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "82/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "150/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "152/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "154/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "156/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "276/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "291/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "292/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "293/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "311/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "434/8/0": {
+   "fieldValue": "14471155124090636801",
+   "fieldValueParsed": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "32000/8/0": {
+   "fieldValue": "c8d3dee9f4ff0a01",
+   "fieldValueParsed": "c8d3dee9f4ff0a01",
+   "sizeInBytes": 8
+  },
+  "0/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "1/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "4/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "6/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "8/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "10/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "27/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "56/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "70/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "82/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "150/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "152/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "154/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "156/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "276/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "291/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "292/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "293/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "311/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "434/8/1": {
+   "fieldValue": "17147458940299390778",
+   "fieldValueParsed": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "32000/8/1": {
+   "fieldValue": "edf8030e19242f3a",
+   "fieldValueParsed": "edf8030e19242f3a",
+   "sizeInBytes": 8
+  },
+  "0/16/0": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "1/16/0": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "4/16/0": {
+   "fieldValueParsed": "0",
+   "sizeInBytes": 16
+  },
+  "6/16/0": {
+   "fieldValueParsed": "0",
+   "sizeInBytes": 16
+  },
+  "8/16/0": {
+   "fieldValueParsed": "0.0.0.0",
+   "sizeInBytes": 16
+  },
+  "10/16/0": {
+   "fieldValueParsed": "0",
+   "sizeInBytes": 16
+  },
+  "27/16/0": {
+   "fieldValueParsed": "c8d3:dee9:f4ff:0a15:202b:3641:4c57:6201",
+   "sizeInBytes": 16
+  },
+  "56/16/0": {
+   "fieldValueParsed": "20:0,:21:1,:22:2,:23:3,:24:4,:25:5,:10:,2:1,:32:,4:3,:54:,6:5,:76:,8:7,:98:,1",
+   "sizeInBytes": 16
+  },
+  "70/16/0": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "82/16/0": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "150/16/0": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "152/16/0": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "154/16/0": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "156/16/0": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "276/16/0": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "291/16/0": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "292/16/0": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "293/16/0": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "311/16/0": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "434/16/0": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "32000/16/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c576201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c576201",
+   "sizeInBytes": 16
+  },
+  "0/16/1": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "1/16/1": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "4/16/1": {
+   "fieldValueParsed": "0",
+   "sizeInBytes": 16
+  },
+  "6/16/1": {
+   "fieldValueParsed": "0",
+   "sizeInBytes": 16
+  },
+  "8/16/1": {
+   "fieldValueParsed": "0.0.0.0",
+   "sizeInBytes": 16
+  },
+  "10/16/1": {
+   "fieldValueParsed": "0",
+   "sizeInBytes": 16
+  },
+  "27/16/1": {
+   "fieldValueParsed": "edf8:030e:1924:2f3a:4550:5b66:717c:8792",
+   "sizeInBytes": 16
+  },
+  "56/16/1": {
+   "fieldValueParsed": "23:7,:24:8,:3,:14:,2:5,:36:,4:7,:58:,6:9,:80:,9:1,:10:2,:11:3,:12:4,:13:5,:14:6",
+   "sizeInBytes": 16
+  },
+  "70/16/1": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "82/16/1": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "150/16/1": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "152/16/1": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "154/16/1": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "156/16/1": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "276/16/1": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "291/16/1": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "292/16/1": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "293/16/1": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "311/16/1": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "434/16/1": {
+   "fieldValueParsed": "NOT_SUPPORTED",
+   "sizeInBytes": 16
+  },
+  "32000/16/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c8792",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c8792",
+   "sizeInBytes": 16
+  },
+  "0/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "1/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "4/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "6/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "8/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "10/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "27/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "56/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "70/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "82/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "150/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "152/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "154/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "156/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "276/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "291/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "292/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "293/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "311/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "434/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "32000/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "0/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "1/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "4/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "6/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "8/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "10/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "27/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "56/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "70/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "82/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "150/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "152/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "154/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "156/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "276/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "291/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "292/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "293/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "311/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "434/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "32000/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  }
+ },
+ "ipfix, parseDataValues false": {
+  "0/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "1/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "4/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "6/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "8/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "10/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "27/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "56/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "70/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "82/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "150/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "152/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "154/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "156/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "276/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "291/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "292/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "293/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "311/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "434/1/0": {
+   "fieldValue": "1",
+   "sizeInBytes": 1
+  },
+  "32000/1/0": {
+   "fieldValue": "01",
+   "fieldValueParsed": "01",
+   "sizeInBytes": 1
+  },
+  "0/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "1/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "4/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "6/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "8/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "10/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "27/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "56/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "70/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "82/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "150/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "152/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "154/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "156/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "276/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "291/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "292/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "293/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "311/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "434/1/1": {
+   "fieldValue": "237",
+   "sizeInBytes": 1
+  },
+  "32000/1/1": {
+   "fieldValue": "ed",
+   "fieldValueParsed": "ed",
+   "sizeInBytes": 1
+  },
+  "0/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "1/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "4/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "6/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "8/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "10/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "27/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "56/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "70/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "82/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "150/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "152/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "154/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "156/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "276/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "291/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "292/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "293/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "311/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "434/2/0": {
+   "fieldValue": "51201",
+   "sizeInBytes": 2
+  },
+  "32000/2/0": {
+   "fieldValue": "c801",
+   "fieldValueParsed": "c801",
+   "sizeInBytes": 2
+  },
+  "0/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "1/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "4/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "6/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "8/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "10/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "27/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "56/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "70/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "82/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "150/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "152/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "154/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "156/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "276/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "291/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "292/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "293/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "311/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "434/2/1": {
+   "fieldValue": "60920",
+   "sizeInBytes": 2
+  },
+  "32000/2/1": {
+   "fieldValue": "edf8",
+   "fieldValueParsed": "edf8",
+   "sizeInBytes": 2
+  },
+  "0/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "1/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "4/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "6/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "8/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "10/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "27/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "56/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "70/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "82/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "150/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "152/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "154/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "156/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "276/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "291/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "292/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "293/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "311/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "434/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "32000/3/0": {
+   "fieldValue": "c8d301",
+   "fieldValueParsed": "c8d301",
+   "sizeInBytes": 3
+  },
+  "0/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "1/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "4/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "6/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "8/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "10/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "27/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "56/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "70/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "82/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "150/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "152/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "154/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "156/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "276/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "291/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "292/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "293/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "311/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "434/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "32000/3/1": {
+   "fieldValue": "edf803",
+   "fieldValueParsed": "edf803",
+   "sizeInBytes": 3
+  },
+  "0/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "1/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "4/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "6/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "8/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "10/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "27/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "56/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "70/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "82/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "150/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "152/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "154/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "156/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "276/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "291/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "292/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "293/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "311/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "434/4/0": {
+   "fieldValue": "3369328129",
+   "sizeInBytes": 4
+  },
+  "32000/4/0": {
+   "fieldValue": "c8d3de01",
+   "fieldValueParsed": "c8d3de01",
+   "sizeInBytes": 4
+  },
+  "0/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "1/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "4/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "6/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "8/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "10/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "27/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "56/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "70/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "82/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "150/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "152/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "154/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "156/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "276/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "291/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "292/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "293/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "311/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "434/4/1": {
+   "fieldValue": "3992453902",
+   "sizeInBytes": 4
+  },
+  "32000/4/1": {
+   "fieldValue": "edf8030e",
+   "fieldValueParsed": "edf8030e",
+   "sizeInBytes": 4
+  },
+  "0/6/0": {
+   "sizeInBytes": 6
+  },
+  "1/6/0": {
+   "sizeInBytes": 6
+  },
+  "4/6/0": {
+   "sizeInBytes": 6
+  },
+  "6/6/0": {
+   "sizeInBytes": 6
+  },
+  "8/6/0": {
+   "sizeInBytes": 6
+  },
+  "10/6/0": {
+   "sizeInBytes": 6
+  },
+  "27/6/0": {
+   "sizeInBytes": 6
+  },
+  "56/6/0": {
+   "sizeInBytes": 6
+  },
+  "70/6/0": {
+   "sizeInBytes": 6
+  },
+  "82/6/0": {
+   "sizeInBytes": 6
+  },
+  "150/6/0": {
+   "sizeInBytes": 6
+  },
+  "152/6/0": {
+   "sizeInBytes": 6
+  },
+  "154/6/0": {
+   "sizeInBytes": 6
+  },
+  "156/6/0": {
+   "sizeInBytes": 6
+  },
+  "276/6/0": {
+   "sizeInBytes": 6
+  },
+  "291/6/0": {
+   "sizeInBytes": 6
+  },
+  "292/6/0": {
+   "sizeInBytes": 6
+  },
+  "293/6/0": {
+   "sizeInBytes": 6
+  },
+  "311/6/0": {
+   "sizeInBytes": 6
+  },
+  "434/6/0": {
+   "sizeInBytes": 6
+  },
+  "32000/6/0": {
+   "fieldValue": "c8d3dee9f401",
+   "fieldValueParsed": "c8d3dee9f401",
+   "sizeInBytes": 6
+  },
+  "0/6/1": {
+   "sizeInBytes": 6
+  },
+  "1/6/1": {
+   "sizeInBytes": 6
+  },
+  "4/6/1": {
+   "sizeInBytes": 6
+  },
+  "6/6/1": {
+   "sizeInBytes": 6
+  },
+  "8/6/1": {
+   "sizeInBytes": 6
+  },
+  "10/6/1": {
+   "sizeInBytes": 6
+  },
+  "27/6/1": {
+   "sizeInBytes": 6
+  },
+  "56/6/1": {
+   "sizeInBytes": 6
+  },
+  "70/6/1": {
+   "sizeInBytes": 6
+  },
+  "82/6/1": {
+   "sizeInBytes": 6
+  },
+  "150/6/1": {
+   "sizeInBytes": 6
+  },
+  "152/6/1": {
+   "sizeInBytes": 6
+  },
+  "154/6/1": {
+   "sizeInBytes": 6
+  },
+  "156/6/1": {
+   "sizeInBytes": 6
+  },
+  "276/6/1": {
+   "sizeInBytes": 6
+  },
+  "291/6/1": {
+   "sizeInBytes": 6
+  },
+  "292/6/1": {
+   "sizeInBytes": 6
+  },
+  "293/6/1": {
+   "sizeInBytes": 6
+  },
+  "311/6/1": {
+   "sizeInBytes": 6
+  },
+  "434/6/1": {
+   "sizeInBytes": 6
+  },
+  "32000/6/1": {
+   "fieldValue": "edf8030e1924",
+   "fieldValueParsed": "edf8030e1924",
+   "sizeInBytes": 6
+  },
+  "0/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "1/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "4/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "6/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "8/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "10/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "27/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "56/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "70/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "82/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "150/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "152/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "154/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "156/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "276/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "291/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "292/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "293/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "311/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "434/8/0": {
+   "fieldValue": "14471155124090636801",
+   "sizeInBytes": 8
+  },
+  "32000/8/0": {
+   "fieldValue": "c8d3dee9f4ff0a01",
+   "fieldValueParsed": "c8d3dee9f4ff0a01",
+   "sizeInBytes": 8
+  },
+  "0/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "1/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "4/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "6/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "8/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "10/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "27/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "56/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "70/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "82/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "150/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "152/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "154/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "156/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "276/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "291/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "292/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "293/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "311/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "434/8/1": {
+   "fieldValue": "17147458940299390778",
+   "sizeInBytes": 8
+  },
+  "32000/8/1": {
+   "fieldValue": "edf8030e19242f3a",
+   "fieldValueParsed": "edf8030e19242f3a",
+   "sizeInBytes": 8
+  },
+  "0/16/0": {
+   "sizeInBytes": 16
+  },
+  "1/16/0": {
+   "sizeInBytes": 16
+  },
+  "4/16/0": {
+   "sizeInBytes": 16
+  },
+  "6/16/0": {
+   "sizeInBytes": 16
+  },
+  "8/16/0": {
+   "sizeInBytes": 16
+  },
+  "10/16/0": {
+   "sizeInBytes": 16
+  },
+  "27/16/0": {
+   "sizeInBytes": 16
+  },
+  "56/16/0": {
+   "sizeInBytes": 16
+  },
+  "70/16/0": {
+   "sizeInBytes": 16
+  },
+  "82/16/0": {
+   "sizeInBytes": 16
+  },
+  "150/16/0": {
+   "sizeInBytes": 16
+  },
+  "152/16/0": {
+   "sizeInBytes": 16
+  },
+  "154/16/0": {
+   "sizeInBytes": 16
+  },
+  "156/16/0": {
+   "sizeInBytes": 16
+  },
+  "276/16/0": {
+   "sizeInBytes": 16
+  },
+  "291/16/0": {
+   "sizeInBytes": 16
+  },
+  "292/16/0": {
+   "sizeInBytes": 16
+  },
+  "293/16/0": {
+   "sizeInBytes": 16
+  },
+  "311/16/0": {
+   "sizeInBytes": 16
+  },
+  "434/16/0": {
+   "sizeInBytes": 16
+  },
+  "32000/16/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c576201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c576201",
+   "sizeInBytes": 16
+  },
+  "0/16/1": {
+   "sizeInBytes": 16
+  },
+  "1/16/1": {
+   "sizeInBytes": 16
+  },
+  "4/16/1": {
+   "sizeInBytes": 16
+  },
+  "6/16/1": {
+   "sizeInBytes": 16
+  },
+  "8/16/1": {
+   "sizeInBytes": 16
+  },
+  "10/16/1": {
+   "sizeInBytes": 16
+  },
+  "27/16/1": {
+   "sizeInBytes": 16
+  },
+  "56/16/1": {
+   "sizeInBytes": 16
+  },
+  "70/16/1": {
+   "sizeInBytes": 16
+  },
+  "82/16/1": {
+   "sizeInBytes": 16
+  },
+  "150/16/1": {
+   "sizeInBytes": 16
+  },
+  "152/16/1": {
+   "sizeInBytes": 16
+  },
+  "154/16/1": {
+   "sizeInBytes": 16
+  },
+  "156/16/1": {
+   "sizeInBytes": 16
+  },
+  "276/16/1": {
+   "sizeInBytes": 16
+  },
+  "291/16/1": {
+   "sizeInBytes": 16
+  },
+  "292/16/1": {
+   "sizeInBytes": 16
+  },
+  "293/16/1": {
+   "sizeInBytes": 16
+  },
+  "311/16/1": {
+   "sizeInBytes": 16
+  },
+  "434/16/1": {
+   "sizeInBytes": 16
+  },
+  "32000/16/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c8792",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c8792",
+   "sizeInBytes": 16
+  },
+  "0/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "1/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "4/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "6/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "8/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "10/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "27/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "56/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "70/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "82/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "150/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "152/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "154/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "156/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "276/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "291/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "292/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "293/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "311/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "434/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "32000/32/0": {
+   "fieldValue": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "fieldValueParsed": "c8d3dee9f4ff0a15202b36414c57626d78838e99a4afbac5d0dbe6f1fc071201",
+   "sizeInBytes": 32
+  },
+  "0/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "1/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "4/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "6/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "8/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "10/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "27/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "56/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "70/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "82/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "150/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "152/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "154/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "156/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "276/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "291/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "292/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "293/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "311/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "434/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  },
+  "32000/32/1": {
+   "fieldValue": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "fieldValueParsed": "edf8030e19242f3a45505b66717c87929da8b3bec9d4dfeaf5000b16212c3742",
+   "sizeInBytes": 32
+  }
+ }
+}
